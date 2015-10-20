@@ -13,6 +13,7 @@
   "staff": [],
   "allowEmailAliases": true,
   "facebookSignin": false,
+  "googleSignin": false,
   "publicEmails": false,
   "auth": {
     "basic": {
@@ -23,6 +24,11 @@
       "clientID": "",
       "clientSecret": "",
       "permissions": [ "email" ]
+    },
+    "google": {
+      "clientID": "",
+      "clientSecret": "",
+      "domainWhiteList": []
     }
   },
   "https": {
@@ -68,6 +74,7 @@
     "headerBackgroundColor",
     "headerFontColor",
     "facebookSignin",
+    "googleSignin",
     "visibility",
     "usersWhitelist",
     "multiForum",
@@ -108,7 +115,7 @@
   "googleAPIKey": "",
   "visibility": "visible",
   "usersWhitelist": false,
-  "multiForum": true,
+  "multiForum": false,
   "feedsLimit": 10,
   "tweetText": "",
   "forceSafeImageURLs": true,
