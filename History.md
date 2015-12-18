@@ -1,8 +1,16 @@
+
+1.0.6 / 2015-12-04
+==================
+
+  * Fix reply edit form #1161
+  * Fixed a few Romanian words
+  * Update Dockerfile
+
 1.0.5 / 2015-11-30
 ==================
 
   * Specify all css dependencies on package.json #1133
-  
+
 1.0.4 / 2015-11-26
 ==================
 
