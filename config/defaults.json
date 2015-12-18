@@ -35,6 +35,8 @@
     "url": "",
     "token": "",
     "mailer": {
+      "name": "The DemocracyOS Team",
+      "email": "no-reply@democracyos.org",
       "service": "",
       "auth": {
         "user": "",
@@ -63,7 +65,6 @@
     "signinUrl",
     "signupUrl",
     "settingsUrl",
-    "clientDebug",
     "homeLink",
     "headerBackgroundColor",
     "headerFontColor",
@@ -101,7 +102,6 @@
   "privacyPolicy": false,
   "glossary": false,
   "homeLink": "/",
-  "clientDebug": "",
   "headerBackgroundColor": "",
   "headerFontColor": "",
   "headerContrast": false,
@@ -125,6 +125,7 @@
     "nl",
     "pl",
     "pt",
+    "ro",
     "ru",
     "sq",
     "sv",

@@ -1,4 +1,53 @@
 
+1.0.6 / 2015-12-04
+==================
+
+  * Fix reply edit form #1161
+  * Fixed a few Romanian words
+  * Update Dockerfile
+
+1.0.5 / 2015-11-30
+==================
+
+  * Specify all css dependencies on package.json #1133
+
+1.0.4 / 2015-11-26
+==================
+
+  * Fix build error #1153
+  * Fix signin redirect #1139
+  * Update Galician translations #1151 (@dalareo)
+
+1.0.3 / 2015-11-18
+==================
+
+  * Fix word breaking on comment-boxes #1144
+
+1.0.2 / 2015-11-18
+==================
+
+  * Add Romanian language #1134 Thanks @alexproca!
+  * Remove unsued local libs #1130
+  * Add Node.js 4.0 requirement #1114
+  * Add and enforce new Styleguide #1127
+  * Remove Google+ share button
+  * Fix notification parameters overwriting #1122
+
+1.0.1 / 2015-10-30
+==================
+
+  * Add new config variables for sending emails. Close #1106
+  * Add not marking as empty a clause with img elements Closes #1098
+  * Add user.optional middleware on /signup and /signin. Close #1107
+  * Add sublime files to .gitignore
+  * Update democracyos-notifier to ~0.0.14
+  * Update .gitignore
+  * Remove lib/tags/tags.js
+  * Remove notificiation on topic-commented, closes #1080
+  * Fix error on remove date
+  * Fix #1066, clear closign add closes datepicker
+  * Fix cache cleaning of Store.findAll
+
 1.0.0 / 2015-10-23
 ==================
 
