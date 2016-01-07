@@ -357,5 +357,7 @@
   "notifications.upvote.verb": "a apprécié votre commentaire",
   "notifications.downvote.verb": "n'a pas apprécié votre commentaire",
   "notifications.on": "actif",
-  "notifications.empty": "Vous n'avez pas de notifications"
+  "notifications.empty": "Vous n'avez pas de notifications",
+  "admin-topics-form.label.votable.yes": "Oui",
+  "admin-topics-form.label.votable.no": "Non"
 }
