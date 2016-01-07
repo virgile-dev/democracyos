@@ -351,13 +351,14 @@
   "validators.not.match": "Aucun résultat",
   "validators.password.not.match": "Les mots de passe ne correspondent pas",
   "validators.required": "Requis",
+  "validators.required": "requis",
   "notifications.title": "Notifications",
   "notifications.topic.text": "Il y a un nouveau débat \"{title}\"",
   "notifications.reply.verb": "a répondu à votre commentaire",
   "notifications.upvote.verb": "a apprécié votre commentaire",
   "notifications.downvote.verb": "n'a pas apprécié votre commentaire",
   "notifications.on": "actif",
-  "notifications.empty": "Vous n'avez pas de notifications",
+  "notifications.empty": "Vous n'avez pas de notification",
   "admin-topics-form.label.votable.yes": "Oui",
   "admin-topics-form.label.votable.no": "Non"
 }
