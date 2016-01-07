@@ -317,5 +317,7 @@
   "validators.min-length.singular": "Ça doit faire 1 caractère au minimum",
   "validators.not.match": "Aucun résultat",
   "validators.password.not.match": "Les mots de passe ne correspondent pas",
-  "validators.required": "Requis"
+  "validators.required": "Requis",
+  "admin-topics-form.label.votable.yes": "Oui",
+  "admin-topics-form.label.votable.no": "Non"
 }
