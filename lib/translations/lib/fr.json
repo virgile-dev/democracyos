@@ -311,7 +311,6 @@
   "signup.email": "Courriel",
   "signup.email-sent": "Courriel envoyé",
   "signup.email-validated": "Votre adresse de courriel a été validée et vous êtes maintenant connecté",
-  "signup.facebook.need-email-error": "",
   "signup.firstname": "Prénom",
   "signup.go-to": "Aller sur",
   "signup.lastname": "Nom",
@@ -360,5 +359,9 @@
   "notifications.on": "actif",
   "notifications.empty": "Vous n'avez pas de notification",
   "admin-topics-form.label.votable.yes": "Oui",
-  "admin-topics-form.label.votable.no": "Non"
+  "admin-topics-form.label.votable.no": "Non",
+  "signin.login-with-google": "Se connecter avec Google",
+  "signin.google.intro": "Utilisez votre compte Google pour vous connecter et participer",
+  "signin.google.domain": "Votre compte doit appartenir<br/> au(x) domaine(s) suivant(s):",
+  "signin.google.contact": "Si vous n'arrivez pas à vous connecter,<br/> merci de contacter votre <a href='mailto:{email}'>administrateur</a>"
 }

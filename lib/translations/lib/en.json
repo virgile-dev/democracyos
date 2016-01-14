@@ -357,5 +357,9 @@
   "validators.password.not.match": "Passwords do not match",
   "validators.required": "Required",
   "admin-topics-form.label.votable.yes": "Yes",
-  "admin-topics-form.label.votable.no": "No"
+  "admin-topics-form.label.votable.no": "No",
+  "signin.login-with-google": "Login with Google",
+  "signin.google.intro": "Use your Google account to sign in and participate",
+  "signin.google.domain": "Your account need to be part of<br/> the following domain(s):",
+  "signin.google.contact": "If you can't sign in,<br/> please contact your <a href='mailto:{email}'>administrator</a>"
 }

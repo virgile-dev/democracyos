@@ -11,6 +11,7 @@
   "signupUrl": "",
   "settingsUrl": "",
   "staff": [],
+  "domainWhiteList": [],
   "allowEmailAliases": true,
   "facebookSignin": false,
   "googleSignin": false,
@@ -27,8 +28,7 @@
     },
     "google": {
       "clientID": "",
-      "clientSecret": "",
-      "domainWhiteList": []
+      "clientSecret": ""
     }
   },
   "https": {
@@ -61,6 +61,7 @@
     "favicon",
     "organizationName",
     "organizationUrl",
+    "organizationEmail",
     "learnMoreUrl",
     "googleAnalyticsTrackingId",
     "commentsPerPage",
@@ -82,7 +83,8 @@
     "tweetText",
     "segmentKey",
     "spamLimit",
-    "availableLocales"
+    "availableLocales",
+    "domainWhiteList"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -112,6 +114,7 @@
   "headerBackgroundColor": "",
   "headerFontColor": "",
   "headerContrast": false,
+  "styleguide": false,
   "googleAPIKey": "",
   "visibility": "visible",
   "usersWhitelist": false,
