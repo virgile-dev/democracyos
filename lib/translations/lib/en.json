@@ -361,5 +361,11 @@
   "signin.login-with-google": "Login with Google",
   "signin.google.intro": "Use your Google account to sign in and participate",
   "signin.google.domain": "Your account need to be part of<br/> the following domain(s):",
-  "signin.google.contact": "If you can't sign in,<br/> please contact your <a href='mailto:{email}'>administrator</a>"
+  "signin.google.contact": "If you can't sign in,<br/> please contact your <a href='mailto:{email}'>administrator</a>",
+  "admin-sidebar.users.create": "Create",
+  "admin-sidebar.users.list": "List",
+  "admin-sidebar.users.title": "Users",
+  "admin-users.list.add-tag": "New",
+  "admin-users.list.staff": "staff",
+  "admin-users.list.search.placeholder": "Search user..."
 }

@@ -1,7 +1,7 @@
 mixin remove-action
   - var hide = repliesCounter && !user.staff ? 'hide' : ''
   a.comment-action.link-remove.btn-remove(href="#", title=t('comment-card.remove-argument'), class=hide)
-    i.icon-remove
+    i.fa.fa-trash
 
 li.media.comment-item(class=classes)
   span.pull-left
@@ -16,7 +16,7 @@ li.media.comment-item(class=classes)
       - if (own)
         +remove-action
         a.comment-action.link-edit.btn-edit(href="#", title=t('comments.edit.argument'))
-          i.icon-pencil
+          i.fa.fa-pencil
       - else if (user.logged())
         - if (user.staff)
           +remove-action
@@ -44,7 +44,7 @@ li.media.comment-item(class=classes)
           a.comment-action.comment-reply.pull-right(href='#', title=title.toLowerCase())
             span.reply-counter= repliesCounter > 0 ? repliesCounter : ''
           a.comment-action.comment-reply.pull-right(href='#', title=t('comments.reply-to-argument'))
-            i.icon-reply
+            i.fa.fa-reply
       span.error
       .oncomment.loginrequired
         =t('comments.sign-in-required-to-vote-comments')

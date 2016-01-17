@@ -363,5 +363,11 @@
   "signin.login-with-google": "Se connecter avec Google",
   "signin.google.intro": "Utilisez votre compte Google pour vous connecter et participer",
   "signin.google.domain": "Votre compte doit appartenir<br/> au(x) domaine(s) suivant(s):",
-  "signin.google.contact": "Si vous n'arrivez pas à vous connecter,<br/> merci de contacter votre <a href='mailto:{email}'>administrateur</a>"
+  "signin.google.contact": "Si vous n'arrivez pas à vous connecter,<br/> merci de contacter votre <a href='mailto:{email}'>administrateur</a>",
+  "admin-sidebar.users.create": "Créer",
+  "admin-sidebar.users.list": "Liste",
+  "admin-sidebar.users.title": "Utilisateurs",
+  "admin-users.list.add-tag": "Nouveau",
+  "admin-users.list.staff": "admin",
+  "admin-users.list.search.placeholder": "Rechercher un utilisateur..."
 }

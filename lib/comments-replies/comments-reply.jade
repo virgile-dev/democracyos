@@ -11,10 +11,10 @@ li.media.reply-item(data-id=reply.id, data-comment-id=comment.id)
       - if (own || user.staff)
         .actions
           a.comment-action.link-remove.btn-reply-remove(href="#", title=t('comment-card.remove-argument'))
-            i.icon-remove
+            i.fa.fa-remove
           - if (own)
             a.comment-action.link-edit.btn-reply-edit(href="#", title=t('comments.edit.argument'))
-              i.icon-pencil
+              i.fa.fa-pencil
       | #{reply.author.fullName}
       small.ago(data-time=(reply.createdAt ? reply.createdAt.toString() : new Date()))
       - if (reply.editedAt)
