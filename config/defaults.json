@@ -99,7 +99,7 @@
   "spamLimit": 5,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
-  "privacyPolicy": false,
+  "privacyPolicy": true,
   "glossary": false,
   "homeLink": "/",
   "headerBackgroundColor": "",
