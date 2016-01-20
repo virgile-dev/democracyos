@@ -2,7 +2,7 @@
 
 Democracy OS est une application web permettant d’organiser démocratiquement des débats et des prises de décisions pour toutes sortes d’organisations et de collectivités.
 
-Democracy OS est développé en open source par la fondation argentine [Democracia en Red](http://democracyos.org) et par ses partenaires internationaux dont [Democracy OS France](http://democracyos.eu) qui maintient la version  que vous utilisez.
+Democracy OS est développé en Open Source par la fondation argentine [Democracia en Red](http://democracyos.org) et par ses partenaires internationaux dont [Democracy OS France](http://democracyos.eu) qui maintient la version  que vous utilisez.
 
 Le code de Democracy OS est accessible sur les répertoires GitHub suivants :
 
@@ -14,4 +14,4 @@ L’avenir de la démocratie open source reposant sur la participation de tous, 
 
 
 
-####Le présent site fonctionne sous la responsabilité juridique de la personne physique ou morale qui l’a mis en ligne.
+###Le présent site fonctionne sous la responsabilité juridique de la personne physique ou morale qui l’a mis en ligne.
