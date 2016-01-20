@@ -14,4 +14,4 @@ L’avenir de la démocratie open source reposant sur la participation de tous, 
 
 
 
-##Le présent site fonctionne sous la responsabilité juridique de la personne physique ou morale qui l’a mis en ligne.
+**Le présent site fonctionne sous la responsabilité juridique de la personne physique ou morale qui l’a mis en ligne.**
