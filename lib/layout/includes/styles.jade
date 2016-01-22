@@ -4,3 +4,18 @@ link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.m
 
 //- Application Styles
 link(rel='stylesheet', href='/app.css')
+
+//- Config Color
+- var myHeaderBackgroundColor = config.headerBackgroundColor;
+- var myHeaderFontColor = config.headerFontColor;
+- var myHeaderContrast = config.headerContrast ? '0 2px 2px #d5d5d5' : 'none';
+style.
+  .header-background-color {
+    background-color: !{myHeaderBackgroundColor}
+  }
+  .header-font-color {
+    color: !{myHeaderFontColor}
+  }
+  .header-contrast {
+    box-shadow: !{myHeaderContrast}
+  }

@@ -177,6 +177,8 @@
     "arr-diff": "^1.0.1",
     "babel-eslint": "^5.0.0-beta6",
     "google-translate": "^1.0.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-util": "^3.0.7",
     "json-file-plus": "^3.0.0",
     "nomnom": "^1.8.1",
     "passport-google-oauth": "^0.2.0"

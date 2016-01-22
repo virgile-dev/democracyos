@@ -22,12 +22,12 @@
       "password": ""
     },
     "facebook": {
-      "clientID": "",
+      "clientId": "",
       "clientSecret": "",
       "permissions": [ "email" ]
     },
     "google": {
-      "clientID": "",
+      "clientId": "",
       "clientSecret": ""
     }
   },
@@ -84,7 +84,8 @@
     "segmentKey",
     "spamLimit",
     "availableLocales",
-    "domainWhiteList"
+    "domainWhiteList",
+    "showCommentsReplies"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -105,14 +106,15 @@
   "googleAnalyticsTrackingId": "",
   "rssEnabled": true,
   "commentsPerPage": 0,
+  "showCommentsReplies": false,
   "spamLimit": 5,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
   "privacyPolicy": false,
   "glossary": false,
   "homeLink": "/",
-  "headerBackgroundColor": "",
-  "headerFontColor": "",
+  "headerBackgroundColor": "#64476e",
+  "headerFontColor": "#fff",
   "headerContrast": false,
   "styleguide": false,
   "googleAPIKey": "",
