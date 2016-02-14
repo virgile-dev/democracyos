@@ -8,7 +8,7 @@
     .media-heading .comment-action
       display inline-block
   &.spam
-    .comment-text, .comment-actions, .link-report.flag
+    .comment-text
       display none
   &.remove
     overflow visible
@@ -39,6 +39,25 @@
     small.ago
       margin-left 10px
 
+    .btn-circle
+      height 22px
+      width 22px
+      border-radius 11px
+      font-size 12px
+      padding 4px 5px
+      border none
+
+    .dropdown-menu
+      min-width 20px
+      text-align center
+
+    .actions
+      opacity 0
+      transition opacity 0.3s ease
+
+  &:hover .media-heading .actions
+    opacity 1
+
   .media-body
     position relative
     min-height 76px
@@ -51,13 +70,13 @@
     -o-transition all 0.3s ease
     transition all 0.3s ease
 
-    .comment-edit-form
+    .comment-form
       display none
 
     &.edit
       .comment-body
         display none
-      .comment-edit-form
+      .comment-form
         display block
 
   .comment-body
@@ -91,7 +110,7 @@
         &:last-child
           margin-right 0
           &.fa-caret-down, &.fa-caret-up
-            margin-left 12px
+            margin-left 0.5em
           &.fa-trash-o
             padding-top 0
 
@@ -175,7 +194,7 @@
     font-weight bold
     height 100%
     left 0
-    padding-top 15px
+    padding-top 10px
     position absolute
     text-align center
     top 0
@@ -211,7 +230,7 @@
         margin-right 0
 
   &.spam
-    .comment-text, .comment-actions, .link-report.flag
+    .comment-text
       display:none
     .spam-message
       display:block
