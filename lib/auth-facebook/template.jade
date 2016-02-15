@@ -4,9 +4,9 @@
       i.fa.fa-sign-in
     h1= t('signin.login-to') + ' ' + t('common.app-name')
   form(action="/auth/facebook", method="get", role="form")
-    button.btn-facebook(type="submit")
-      span.flaticon.social.facebook
-      = t('signin.login-with-facebook')
+    button.btn.btn-block.btn-labeled.btn-default.btn-facebook(type="submit")
+      span.btn-label.pull-left: i.fa.fa-facebook
+      span= t('signin.login-with-facebook')
 
     - if (config.termsOfService)
       p: a(href="/help/terms-of-service")= t('help.tos.title')

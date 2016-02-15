@@ -3,15 +3,15 @@
     i.fa.fa-sign-in
     h1= t('signin.login-to') + ' ' + t('common.app-name')
   - if (config.domainWhiteList.length)
-  - var domains = config.domainWhiteList
-    p!=t('signin.google.domain')
-    ul.list-unstyled
-      each d in domains
-        li= '@' + d
+    - var domains = config.domainWhiteList
+      p!=t('signin.google.domain')
+      ul.list-unstyled
+        each d in domains
+          li= '@' + d
   form(action="/auth/google", method="get", role="form")
-    button.btn-google(type="submit")
-      span.flaticon.social.google-plus
-      = t('signin.login-with-google')
+    button.btn.btn-block.btn-labeled.btn-default.btn-google(type="submit")
+      span.btn-label.pull-left: i.fa.fa-google
+      span= t('signin.login-with-google')
   p!=t('signin.google.contact',{email: config.organizationEmail})
   - if (config.termsOfService)
     p: a(href="/help/terms-of-service")= t('help.tos.title')

@@ -110,7 +110,7 @@
   "spamLimit": 5,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
-  "privacyPolicy": true,
+  "privacyPolicy": false,
   "glossary": false,
   "homeLink": "/",
   "headerBackgroundColor": "#64476e",
