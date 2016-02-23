@@ -5,13 +5,20 @@ mixin remove-action
 
 li.media.comment-item(class=classes)
   .media-left
-    img.media-object.avatar(src=avatar, title=comment.author.displayName)
+    - if (comment.alias)
+      span.media-object.avatar
+        i.fa.fa-users
+    - else
+      img.media-object.avatar(src=avatar, title=comment.author.displayName)
 
   .media-body
     h3.media-heading(title=comment.author.displayName)
-      | #{comment.author.fullName}
-      - if (comment.author.staff)
-        span.badge.staff=t('admin-users.list.staff')
+      - if (comment.alias)
+        | #{comment.alias}
+      - else
+        | #{comment.author.fullName}
+        - if (comment.author.staff)
+          span.badge.staff=t('admin-users.list.staff')
       small.ago(data-time=comment.createdAt.toString())
       - if (comment.editedAt)
         small.edited &nbsp;·&nbsp;#{t('comments.edited')}
@@ -49,6 +56,11 @@ li.media.comment-item(class=classes)
           | .
           span.show-spam: a(href='#')= t('comment-card.show')
     .comment-form
+    - if (comment.alias)
+      .comment-alias-from
+        span.visible-xs-block.visible-lg-inline.title=t('comments.alias.from')
+        img.avatar(src=avatar, title=comment.author.displayName)
+        span.name #{comment.author.fullName}
     .comment-actions.btn-toolbar(role='toolbar')
       - if (repliesCounter)
         .btn-group(role='group')

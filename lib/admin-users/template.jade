@@ -1,9 +1,9 @@
-#users-wrapper
+#users-wrapper.admin-wrapper
   .users-admin
     .row
       .list.list-group
         - each user in users
-          a.list-group-item(href="/admin/users/" + user.id)
+          .list-group-item.user-item
             .media
               .media-left
                 img.media-object(src=user.avatar)

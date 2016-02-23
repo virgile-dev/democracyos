@@ -1,6 +1,6 @@
 - var tabindex = 1
 
-#tag-wrapper
+#tag-wrapper.admin-wrapper
   .tag-admin
     .heading
       .circle
@@ -18,5 +18,5 @@
             label.btn.btn-primary.tag-image(class={ active: image.name === tag.image })
               input(type="radio", name="image", autocomplete="off", tabindex=tabindex++, value=image.name, checked= tag.image === image.name, validate='any:image')
               .tag-image-fill
-                img(src=image.url)
+                i.fa(class=image.url)
       .form-group: button.btn.btn-success.btn-block.btn-lg(tabindex=tabindex++)=t('admin-tags-form.button.submit')

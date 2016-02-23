@@ -48,7 +48,7 @@ mixin btn-new-comment
               .input-group
                 span.input-group-addon
                   input(type='checkbox',name='asAlias')
-                input.form-control(type='text', name='alias', tabindex=2, placeholder='Publié en tant que ...')
+                input.form-control(type='text', name='alias', tabindex=2, placeholder=t('comments.alias.placeholder'))
             .form-group.clearfix
               ul.form-messages
               input.btn.btn-success.form-submit.pull-right(type='submit', tabindex=4, value=t('comments.send'))
