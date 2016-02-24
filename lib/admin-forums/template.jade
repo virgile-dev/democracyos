@@ -1,9 +1,13 @@
 #forum-wrapper.admin-wrapper
   .forum-admin
-    .row
-      .list.list-group
-        - each forum in forums
-          a.list-group-item.forum-item(href='/'+forum.name)
-            h4
-              =forum.title
-              small=forum.summary
+    .actions.well
+      a.btn.btn-success.btn-labeled.new(href='/admin/forums/create')
+        span.btn-label.pull-left
+          span.fa.fa-plus
+        span=t('admin-topics.list.add-topic')
+    .list.list-group
+      - each forum in forums
+        a.list-group-item.forum-item(href='/'+forum.name)
+          h4
+            =forum.title
+            small=forum.summary
