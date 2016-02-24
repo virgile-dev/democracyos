@@ -44,6 +44,7 @@ mixin btn-new-comment
                 span.fa.fa-question-circle
             .form-group
               textarea.form-control#f-text(name='text', rows='4', validate='required max-length:4096', placeholder=t('comments.your.placeholder'), tabindex=1)
+            .form-toolbar=t('comments.alias.title')
             .form-group
               .input-group
                 span.input-group-addon

@@ -372,6 +372,7 @@
   "admin-users.list.add-tag": "New",
   "admin-users.list.staff": "staff",
   "admin-users.list.search.placeholder": "Search user...",
+  "comments.alias.title": "Alias",
   "comments.alias.placeholder": "Publish as ...",
   "comments.alias.from": "Published by",
   "comments.all": "All",
