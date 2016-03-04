@@ -32,9 +32,9 @@
             p= t('signup.accepting')
             ul
               - if (tos)
-                li: a(href='#{config.subPath}/help/terms-of-service', target='_blank')=t('help.tos.title')
+                li: a(href='/help/terms-of-service', target='_blank')=t('help.tos.title')
               - if (pp)
-                li: a(href='#{config.subPath}/help/privacy-policy', target='_blank')=t('help.pp.title')
+                li: a(href='/help/privacy-policy', target='_blank')=t('help.pp.title')
     - if (config.facebookSignin)
       #auth-facebook-form
         form(action="#{config.subPath}/auth/facebook", method="get", role="form")
@@ -51,4 +51,4 @@
     h1 Welcome
     p.lead.text-muted #{t('signup.received')}.
     p.lead.text-muted= t('signup.check-email')
-    a(href='#{config.subPath}/signup/resend-validation-email')= t('signup.resend-validation-email')
+    a(href='/signup/resend-validation-email')= t('signup.resend-validation-email')
