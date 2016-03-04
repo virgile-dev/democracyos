@@ -3,7 +3,7 @@
     .circle
       i.fa.fa-sign-in
     h1= t('signin.login-to') + ' ' + t('common.app-name')
-  form(action="/#{config.subPath}auth/facebook", method="get", role="form")
+  form(action="#{config.subPath}/auth/facebook", method="get", role="form")
     button.btn.btn-block.btn-labeled.btn-default.btn-facebook(type="submit")
       span.btn-label.pull-left: i.fa.fa-facebook
       span= t('signin.login-with-facebook')

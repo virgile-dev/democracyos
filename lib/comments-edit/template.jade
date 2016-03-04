@@ -1,5 +1,5 @@
 .comment-edit
-  form.comment-edit-form(method='put', action='/#{config.subPath}api/comment/#{comment.id}', autosubmit='autosubmit', autovalidate='autovalidate')
+  form.comment-edit-form(method='put', action='#{config.subPath}/api/comment/#{comment.id}', autosubmit='autosubmit', autovalidate='autovalidate')
     .form-group
       textarea.form-control(name='text', rows='4', validate='required max-length:4096', tabindex='1')= comment.text
     .form-group.clearfix

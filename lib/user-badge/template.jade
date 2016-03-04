@@ -1,6 +1,6 @@
 .user-wrapper
   .notifications-badge.pull-left.hidden-xs
-    a.btn.notifications(href='/#{config.subPath}notifications')
+    a.btn.notifications(href='#{config.subPath}/notifications')
       span.fa.fa-bell-o.bell-o
   .user-badge.pull-right
     a.btn.profile
@@ -10,10 +10,10 @@
       span.caret
     ul.dropdown-list
       li.visible-xs
-        a(href='/#{config.subPath}notifications')=t('notifications.title')
+        a(href='#{config.subPath}/notifications')=t('notifications.title')
       - if (user.staff)
-        li: a(href='/#{config.subPath}admin')= t('header.admin')
-      li: a(href='/#{config.subPath}settings')= t('header.settings')
+        li: a(href='#{config.subPath}/admin')= t('header.admin')
+      li: a(href='#{config.subPath}/settings')= t('header.settings')
       - if (config.frequentlyAskedQuestions)
         li: a(href="/help/faq")= t('help.faq.title')
       - if (config.termsOfService)
@@ -22,4 +22,4 @@
         li: a(href="/help/privacy-policy")= t('help.pp.title')
       - if (config.glossary)
         li: a(href="/help/glossary")= t('help.glossary.title')
-      li: a(href='/#{config.subPath}logout')= t('header.logout')
+      li: a(href='#{config.subPath}/logout')= t('header.logout')

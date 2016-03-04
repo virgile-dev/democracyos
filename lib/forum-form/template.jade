@@ -4,7 +4,7 @@ main.container
       .forum-top
         h1.forum-title= t('forum.form.title')
 
-      form.form(action="/#{config.subPath}api/forum", method="post", role="form", novalidate, autovalidate, autosubmit)
+      form.form(action="#{config.subPath}/api/forum", method="post", role="form", novalidate, autovalidate, autosubmit)
         ul.form-errors
 
         .fieldsets

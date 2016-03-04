@@ -36,10 +36,10 @@ mixin btn-new-comment
           ul.media-list.my-comments-list
           +btn-new-comment
         .tab-pane#form(role='tabpanel')
-          form.comment-form(method='post', action='/#{config.subPath}api/comment?topicId=#{item.id}', autovalidate, autosubmit)
+          form.comment-form(method='post', action='#{config.subPath}/api/comment?topicId=#{item.id}', autovalidate, autosubmit)
             .form-toolbar.clearfix
               span.form-title=t('comments.new.argument')
-              a.pull-right(href='/#{config.subPath}help/markdown', target='_blank')
+              a.pull-right(href='#{config.subPath}/help/markdown', target='_blank')
                 span=t('markdown.comments.formatting-help')
                 span.fa.fa-question-circle
             .form-group
@@ -58,7 +58,7 @@ mixin btn-new-comment
     - if (!logged)
       .signup-info
         p.text-mute= t('comments.sign-in-required')
-        a(href='/#{config.subPath}signin')= t('signin.login')
+        a(href='#{config.subPath}/signin')= t('signin.login')
         | &nbsp;#{t('common.or')}&nbsp;
         - var signupUrl = '/signup?reference=' + reference
         a(href=signupUrl)= t('signin.signup')

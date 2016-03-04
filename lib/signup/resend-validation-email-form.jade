@@ -4,7 +4,7 @@
       .circle
         i.fa.fa-user
       h1= t('signup.resend-validation-email')
-    form.form(action='/#{config.subPath}signup/resend-validation-email', method='post', role='form', autovalidate='autovalidate', autosubmit='autosubmit')
+    form.form(action='#{config.subPath}/signup/resend-validation-email', method='post', role='form', autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-errors
       .form-group
         label= t('signup.email')
