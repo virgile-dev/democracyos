@@ -5,7 +5,7 @@
     .actions.well
       .row
         .col-md-3.col-xs-12
-          a.btn.btn-success.btn-block.btn-labeled.clearfix.new(href='/admin/topics/create')
+          a.btn.btn-success.btn-block.btn-labeled.clearfix.new(href='#{config.subPath}/admin/topics/create')
             span.btn-label.pull-left
               span.fa.fa-plus
             span=t('admin-topics.list.add-topic')
@@ -28,7 +28,7 @@
                 =t('admin-topics-form.label.mediaTitle')
     .list.list-group
       - each topic in topics
-        a.list-group-item(href="/admin/topics/" + topic.id, data-topicid=topic.id)
+        a.list-group-item(href="#{config.subPath}/admin/topics/" + topic.id, data-topicid=topic.id)
           button.btn.btn-default.pull-right.delete-topic
             span.glyphicon.glyphicon-trash
           h4.topic-title

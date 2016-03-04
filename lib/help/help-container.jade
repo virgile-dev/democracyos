@@ -4,12 +4,12 @@
       ul.help-menu
         li.heading= t('help.title')
         - if (config.frequentlyAskedQuestions)
-          li: a(href="/help/faq")= t('help.faq.title')
+          li: a(href="#{config.subPath}/help/faq")= t('help.faq.title')
         - if (config.termsOfService)
-          li: a(href="/help/terms-of-service")= t('help.tos.title')
+          li: a(href="#{config.subPath}/help/terms-of-service")= t('help.tos.title')
         - if (config.privacyPolicy)
-          li: a(href="/help/privacy-policy")= t('help.pp.title')
+          li: a(href="#{config.subPath}/help/privacy-policy")= t('help.pp.title')
         - if (config.glossary)
-          li: a(href="/help/glossary")= t('help.glossary.title')
-        li: a(href="/help/markdown")= t('help.markdown.title')
+          li: a(href="#{config.subPath}/help/glossary")= t('help.glossary.title')
+        li: a(href="#{config.subPath}/help/markdown")= t('help.markdown.title')
     .help-content

@@ -16,6 +16,6 @@
             input.form-control.search(type='text', placeholder='#{t("admin-tags.list.search.placeholder")}', autofocus)
     .list.list-group
       - each tag in tags
-        a.list-group-item(href="/admin/tags/" + tag.id)
+        a.list-group-item(href="#{config.subPath}/admin/tags/" + tag.id)
           span.tag-icon.fa(class=tagImages[tag.image].url)
           span.tag-title=tag.name

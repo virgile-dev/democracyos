@@ -2,7 +2,7 @@
   - if (forum)
     .content.manage
       p
-        a(href='/settings/forums')
+        a(href='#{config.subPath}/settings/forums')
           = t('newsfeed.call-to-action.manage-forums')
           i.glyphicon.glyphicon-menu-right
   - else
@@ -10,6 +10,6 @@
       .content
         h1= t('newsfeed.welcome.title')
         p= t('newsfeed.welcome.body')
-        a.btn.btn-default(href="/forums/new")
+        a.btn.btn-default(href="#{config.subPath}/forums/new")
           = t('newsfeed.call-to-action.start-a-forum')
           i.glyphicon.glyphicon-chevron-right

@@ -1,13 +1,13 @@
 #forum-wrapper.admin-wrapper
   .forum-admin
     .actions.well
-      a.btn.btn-success.btn-labeled.new(href='/admin/forums/create')
+      a.btn.btn-success.btn-labeled.new(href='#{config.subPath}/admin/forums/create')
         span.btn-label.pull-left
           span.fa.fa-plus
         span=t('admin-topics.list.add-topic')
     .list.list-group
       - each forum in forums
-        a.list-group-item.forum-item(href='/'+forum.name)
+        a.list-group-item.forum-item(href='#{config.subPath}/'+forum.name)
           h4
             =forum.title
             small=forum.summary

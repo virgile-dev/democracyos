@@ -13,9 +13,9 @@
     .user
     - var color = config.headerFontColor;
     - var style = color ? 'color: ' + color : '';
-    a(href='/signin', style=style).login.pull-right.anonymous-user
+    a(href='#{config.subPath}/signin', style=style).login.pull-right.anonymous-user
       i.fa.fa-sign-in
       span= t('header.signin')
-    a(href='/signup', style=style).login.pull-right.anonymous-user
+    a(href='#{config.subPath}/signup', style=style).login.pull-right.anonymous-user
       i.fa.fa-user
       span= t('header.signup')
