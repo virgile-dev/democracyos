@@ -1,5 +1,5 @@
 .reply-edit
-  form.reply-edit-form(method='put', action='/api/comment/#{comment.id}/reply/#{reply.id}', autosubmit='autosubmit', autovalidate='autovalidate')
+  form.reply-edit-form(method='put', action='/#{config.subPath}api/comment/#{comment.id}/reply/#{reply.id}', autosubmit='autosubmit', autovalidate='autovalidate')
     .form-group
       textarea.form-control(name='text', rows='4', tabindex='1', validate='required max-length:4096')= reply.text
     .form-group
