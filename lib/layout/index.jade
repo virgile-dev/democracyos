@@ -63,6 +63,6 @@ html(lang='en')
         window.translations=!{JSON.stringify(translations)};
       - if (config.segmentKey)
         include includes/segment
-      script(src='/app.js')
+      script(src='#{config.protocol}://#{config.host}:#{config.publicPort}/app.js')
       //- End of `Javascripts`
       include includes/fonts
