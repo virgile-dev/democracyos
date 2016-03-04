@@ -86,7 +86,8 @@
     "spamLimit",
     "availableLocales",
     "domainWhiteList",
-    "showCommentsReplies"
+    "showCommentsReplies",
+    "subPath"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
