@@ -6,7 +6,7 @@
     span.bar-icon(style='background-color: #{headerFontColor}')
 
     h1.login
-      a(href=config.homeLink || '/')
+      a(href=config.homeLink || '#{config.subPath}/')
         span= config.organizationName
 
   .user-nav.btn-group
