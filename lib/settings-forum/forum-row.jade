@@ -1,10 +1,10 @@
 .forum
   .title.pull-left
     p
-      a.url(href=config.subPath+forum.url): strong= forum.title
-    a.url(href=config.subPath+forum.url)= forum.url
+      a.url(href=forum.url): strong= forum.title
+    a.url(href=forum.url)= forum.url
   .actions.pull-right
-    a(href='#{config.subPath}#{forum.url}admin')
+    a(href='#{forum.url}admin')
       i.glyphicon.glyphicon-cog
     a.btn-remove(href='#')
       i.glyphicon.glyphicon-trash
