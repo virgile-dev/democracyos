@@ -18,6 +18,8 @@
   "googleSignin": false,
   "publicEmails": false,
   "auth": {
+    "exposedHost":"",
+    "exposedPort":"",
     "basic": {
       "username": "",
       "password": ""

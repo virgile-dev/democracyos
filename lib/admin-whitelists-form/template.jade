@@ -1,6 +1,6 @@
 #whitelist-wrapper
   .whitelist-admin
-    form.form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
+    form.form.form-horizontal(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
       .form-group
         label=t('admin-whitelist.type')

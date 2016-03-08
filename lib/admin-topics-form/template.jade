@@ -14,7 +14,7 @@
         .circle
           i.fa.fa-user
         h1= t(form.title)
-      form(action=form.action, method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
+      form(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
         input(type='hidden', name='_topic_id_', value=topic.id)
         ul.form-messages
         .form-group
