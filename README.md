@@ -18,10 +18,8 @@ Please refer to the [Installation](http://docs.democracyos.org/install.html) wik
 * [EuVoto](http://euvoto.org/): Brazilian initiative by the Open Knowledge Foundation Brasil to discuss legislation in the city of Sao Paulo.
 * [Loi Renseignement](http://pjlr.democracyos.eu/): First deployment by DemocracyOS France to discuss the Loi Renseignement.
 * [Evoks](http://evoks.hu/): Hungarian project by Atlatzo.hu for discussing social issues.
-* [PAMI](http://debatics.pami.org.ar/): The largest healthcare program for elderly peolpe opens its technical decisions.
-* [Cambridge City's Councillor Nadeem Mazen](http://nadeemmazen.democracyos.com/): Councillor Nadeem Mazen's official DemocracyOS.
-* [Ukrainian Choice](http://ukrainianchoice.herokuapp.com/): Official deployment of DemocracyOS Ukraine.
->>>>>>> auth-google-app
+* [PAMI](http://debatics.pami.org.ar/): The largest healthcare program for elderly people opens its technical decisions.
+* [Ukrainian Choice](http://ukrainianchoice.herokuapp.com/law/557ba8ca29e8180300c88c48): Official deployment of DemocracyOS Ukraine.
 
 ## Contributing
 
@@ -38,7 +36,6 @@ See [CONTRIBUTORS.md](https://github.com/DemocracyOS/app/blob/master/CONTRIBUTOR
 * [DemocracyOS mailing list](https://groups.google.com/forum/#!forum/democracyos-app): questions about DemocracyOS exclusively. For bug reports or feature requests please use the project's [Issues](https://github.com/DemocracyOS/app/issues).
 * [DemocracyOS chat room](https://gitter.im/democracyos/app/).
 * [Democracia en Red](http://democraciaenred.org): The `Net Democracy Foundation` official site.
->>>>>>> auth-google-app
 
 ## Browser support
 
