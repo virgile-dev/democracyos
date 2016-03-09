@@ -4,8 +4,9 @@
       ul.settings-menu
         li.heading= t('settings.title')
         li: a(href="#{config.subPath}/settings/profile")= t('settings.profile')
-        - if (!(config.facebookSignin||config.googleSignin))
+        - if(user.hasPassword)
           li: a(href="#{config.subPath}/settings/password")= t('password')
         li: a(href="#{config.subPath}/settings/sessions", style="display: none;")= t('settings.sessions')
         li: a(href="#{config.subPath}/settings/notifications")= t('settings.notifications')
+      span=user.hasPassword
     .settings-content
