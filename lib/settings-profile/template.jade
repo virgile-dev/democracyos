@@ -32,19 +32,4 @@
       .form-group
         label #{t('settings.locale')}
         select.form-control(id='locale', name='locale', tabindex=5)
-      .form-group
-        label #{t('settings.location')}
-        select.form-control(id='location', name='location', tabindex=6)
-      .form-group
-        label #{t('settings.age')}
-        select.form-control(id='age', name='age', tabindex=7)
-      .form-group
-        input(type='checkbox',id='activity-live',name='activity-live',value='#{user.activities.live}')
-        label.inline #{t('settings.activity.live')}
-      .form-group
-        input(type='checkbox',id='activity-work',name='activity-work',value='#{user.activities.work}')
-        label.inline #{t('settings.activity.work')}
-      .form-group
-        input(type='checkbox',id='activity-study',name='activity-study',value='#{user.activities.study}')
-        label.inline #{t('settings.activity.study')}
       .form-group: button.btn.btn-success.btn-block.btn-lg(tabindex=15)=t('settings.save')
