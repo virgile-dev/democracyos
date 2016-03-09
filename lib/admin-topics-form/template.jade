@@ -11,9 +11,28 @@
   - else
     .topic-admin
       .heading
-        .circle
+        h1
           i.fa.fa-user
-        h1= t(form.title)
+          =t(form.title)
+        
+        .commands
+          a.btn.btn-success.btn-labeled.save
+            span.btn-label
+              i.fa.fa-floppy-o
+            span= t('admin-topics-form.button.submit')
+          a.btn.btn-primary.btn-labeled.make-private(class=topic.public && topic.id ? '' : 'hide')
+            span.btn-label
+              i.fa.fa-eye-slash
+            span= t('admin-topics-form.button.make-private')
+          a.btn.btn-primary.btn-labeled.make-public(class=topic.draft && topic.id ? '' : 'hide')
+            span.btn-label
+              i.fa.fa-eye
+            span= t('admin-topics-form.button.make-public')
+          - if (topic.id)
+            a.btn.btn-danger.btn-labeled.delete-topic
+              span.btn-label
+                i.fa.fa-trash
+              span= t('admin-topics-form.delete-topic.button.delete')
       form(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
         input(type='hidden', name='_topic_id_', value=topic.id)
         ul.form-messages

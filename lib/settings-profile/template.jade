@@ -10,8 +10,15 @@
         .image-container
           img(src=user.profilePicture(), width="65")
         .controls
-          a(href="https://gravatar.com", target="_blank")
-            strong= t('settings.change-at-gravatar')
+          - if (user.profileType==='facebook')
+            a(href="https://facebook.com", target="_blank")
+              strong= t('settings.change-at-facebook')
+          - else if (user.profileType==='google')
+            a(href="https://google.com", target="_blank")
+              strong= t('settings.change-at-google')
+          - else
+            a(href="https://gravatar.com", target="_blank")
+              strong= t('settings.change-at-gravatar')
           input.form-control(type='text', name='profilePictureUrl', tabindex=5, placeholder=t('settings.paste-url-image'), value=user.profilePictureUrl, validate='url')
       .form-group
         label #{t('settings.first-name')}

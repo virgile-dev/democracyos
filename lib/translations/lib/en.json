@@ -252,6 +252,8 @@
   "settings-forums.delete.confirmation.title": "Are you ABSOLUTELY sure?",
   "settings-notifications.no": "No",
   "settings-notifications.yes": "Yes",
+  "settings.change-at-facebook": "Change your profile picture at facebook.com",
+  "settings.change-at-google": "Change your profile picture at google.com",
   "settings.change-at-gravatar": "Change your profile picture at gravatar.com",
   "settings.change-password": "Change password",
   "settings.confirm-password": "Confirm new password",

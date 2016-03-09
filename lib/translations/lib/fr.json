@@ -245,6 +245,8 @@
   "settings-forums.delete.confirmation.title": "Etes-vous VRAIMENT sûr ?",
   "settings-notifications.no": "Non",
   "settings-notifications.yes": "Oui",
+  "settings.change-at-facebook": "Changez votre photo de profil sur facebook.com",
+  "settings.change-at-google": "Changez votre photo de profil sur google.com",
   "settings.change-at-gravatar": "Changez votre photo de profil sur gravatar.com",
   "settings.change-password": "Changer le mot de passe",
   "settings.confirm-password": "Confirmer le nouveau mot de passe",
