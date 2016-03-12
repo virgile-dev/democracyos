@@ -20,6 +20,10 @@ li.media.reply-item(data-id=reply.id, data-comment-id=comment.id)
       span #{reply.author.fullName}
       - if (reply.author.staff)
         span.badge.staff=t('admin-users.list.staff')
+      - if(reply.author.roles)
+        - var roles = reply.author.roles
+        each role in roles
+          span.badge(class=role)=t("settings.role."+role)
       br/
       small.ago(data-time=(reply.createdAt ? reply.createdAt.toString() : new Date()))
       - if (reply.editedAt)

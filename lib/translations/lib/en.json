@@ -379,5 +379,7 @@
   "comments.alias.from": "Published by",
   "comments.all": "All",
   "comments.your.placeholder": "write your comment",
-  "alias.limited": "Alais is limited to 110 characters"
+  "alias.limited": "Alias is limited to 110 characters",
+  "comments.count.title": "Contributors",
+  "comment-card.count": "contributors"
 }

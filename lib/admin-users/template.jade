@@ -8,9 +8,37 @@
               .media-left
                 img.media-object(src=user.avatar)
               .media-body
-                span=user.fullName
-                - if (user.staff)
-                  span.badge.staff=t("admin-users.list.staff")
-                p
-                  span.fa.fa-envelope-o
-                  = ' ' + user.email 
+                .row
+                  .cols-xs-12.col-md-8
+                    h4
+                      span=user.fullName
+                      - if (user.staff)
+                        span.badge.staff=t("admin-users.list.staff")
+                      - if(user.roles)
+                        - var roles = user.roles
+                        each role in roles
+                          span.badge(class=role)=t("settings.role."+role)
+                      
+                    p.info
+                      i.fa.fa-envelope-o
+                      span=user.email 
+                    - if (user.location)
+                      p.info
+                        i.fa.fa-map-marker
+                        span= t('settings.location.' + user.location) 
+                    - if (user.age)
+                      p.info
+                        i.fa.fa-birthday-cake
+                        span= t('settings.age.' + user.age) 
+                    - if (user.activities.live)
+                      p.info
+                        i.fa.fa-street-view
+                        span= t('settings.activity.live') 
+                    - if (user.activities.work)
+                      p.info
+                        i.fa.fa-street-view
+                        span= t('settings.activity.work') 
+                    - if (user.activities.study)
+                      p.info
+                        i.fa.fa-street-view
+                        span= t('settings.activity.study') 

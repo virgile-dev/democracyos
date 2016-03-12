@@ -1,9 +1,9 @@
 #profile-wrapper.hide
   .profile-settings
     .heading
-      .circle
+      h1
         i.fa.fa-user
-      h1= t('settings.profile')
+        span= t('settings.profile')
     form.form(action="#{config.subPath}/settings/profile", method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
       .form-group.profile-picture
@@ -32,4 +32,38 @@
       .form-group
         label #{t('settings.locale')}
         select.form-control(id='locale', name='locale', tabindex=5)
-      .form-group: button.btn.btn-success.btn-block.btn-lg(tabindex=15)=t('settings.save')
+      .form-group
+        label #{t('settings.location')}
+        select.form-control(id='location', name='location', tabindex=6)
+          option(value=0)
+      .form-group
+        label #{t('settings.age')}
+        select.form-control(id='age', name='age', tabindex=7)
+          option(value=0)
+      .form-group
+        input(type='checkbox',id='activityLive',name='activityLive',checked=user.activities.live)
+        label.inline #{t('settings.activity.live')}
+      .form-group
+        input(type='checkbox',id='activityWork',name='activityWork',checked=user.activities.work)
+        label.inline #{t('settings.activity.work')}
+      .form-group
+        input(type='checkbox',id='activityStudy',name='activityStudy',checked=user.activities.study)
+        label.inline #{t('settings.activity.study')}
+      .form-group.row.actions
+        .col-xs-12.col-md-6.col-md-offset-3
+          button.btn.btn-block.btn-labeled.btn-success(tabindex=15)
+            span.btn-label.pull-left
+              span.glyphicon.glyphicon-save
+            span=t('settings.save')
+        //- - if (user.profileType==='facebook')
+        //-   .col-xs-12.col-md-6
+        //-     button.btn.btn-block.btn-labeled.btn-default.btn-facebook(tabindex=16)
+        //-       span.btn-label.pull-left
+        //-         i.fa.fa-facebook
+        //-       span= 'Mettre à jour'
+        //- - else if (user.profileType==='google')
+        //-   .col-xs-12.col-md-6
+        //-     button.btn.btn-block.btn-labeled.btn-default.btn-google(tabindex=16)
+        //-       span.btn-label.pull-left
+        //-         i.fa.fa-google
+        //-       span= t('signin.login-with-google')

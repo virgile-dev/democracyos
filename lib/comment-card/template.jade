@@ -19,6 +19,10 @@ li.media.comment-item(class=classes)
         | #{comment.author.fullName}
         - if (comment.author.staff)
           span.badge.staff=t('admin-users.list.staff')
+        - if(comment.author.roles)
+          - var roles = comment.author.roles
+          each role in roles
+            span.badge(class=role)=t("settings.role."+role)
       small.ago(data-time=comment.createdAt.toString())
       - if (comment.editedAt)
         small.edited &nbsp;·&nbsp;#{t('comments.edited')}
@@ -41,6 +45,9 @@ li.media.comment-item(class=classes)
               li
                 a.delete-comment(title=t('comment-card.remove-argument'), class=hide)
                   i.fa.fa-trash-o
+    - if (comment.count)
+      div.count
+        span= comment.count + ' ' + t('comment-card.count')
     .comment-body
       .comment-text!=markdown(comment.text)
       - if (own || user.staff)

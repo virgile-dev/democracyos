@@ -1,9 +1,9 @@
 #password-wrapper.hide
   .password-settings
     .heading
-      .circle
+      h1
         i.fa.fa-lock
-      h1= t('settings.change-password')
+        span= t('settings.change-password')
     form.form(action="#{config.subPath}/settings/password", method="post", role="form", autosubmit='autosubmit', autovalidate='autovalidate')
       ul.form-messages
       .form-group
@@ -15,4 +15,9 @@
       .form-group
         label= t('settings.confirm-password')
         input.form-control(type='password', name='confirm_password', tabindex=3, placeholder=t(''), value='', validate='required same:password')
-      .form-group: button.btn.btn-success.btn-block.btn-lg(tabindex=4)=t('settings.save')
+      .form-group.row.actions
+        .col-xs-12.col-md-6.col-md-offset-3
+          button.btn.btn-block.btn-labeled.btn-success(tabindex=4)
+            span.btn-label.pull-left
+              span.glyphicon.glyphicon-save
+            span=t('settings.save')

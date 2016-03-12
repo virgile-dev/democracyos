@@ -415,5 +415,7 @@
   "comments.alias.from": "Publié par",
   "comments.all": "Tous",
   "comments.your.placeholder": "Saisir votre contribution",
-  "alias.limited": "L'alias ne peut pas excéder 110 caractères"
+  "alias.limited": "L'alias ne peut pas excéder 110 caractères",
+  "comments.count.title": "Nombre de participants",
+  "comment-card.count": "participants"
 }

@@ -1,9 +1,9 @@
 #notifications-wrapper.hide
   .notifications-settings
     .heading
-      .circle
-        i.fa.fa-lock
-      h1=t('settings.notifications.title')
+      h1
+        i.fa.fa-bell-o
+        span=t('settings.notifications.title')
     form.form(action="#{config.subPath}/settings/notifications", method="post", role="form", autosubmit='autosubmit')
       ul.form-messages
       .form-group
@@ -12,4 +12,9 @@
         label(for='new-topic') #{t('settings.notifications.new-topic')}
       .form-group.replies.checkbox
         label(for='replies') #{t('settings.notificatoins.someone-replies-your-comments')}
-      .form-group: button.btn.btn-success.btn-block.btn-lg(tabindex=4)=t('settings.save')
+      .form-group.row.actions
+        .col-xs-12.col-md-6.col-md-offset-3
+          button.btn.btn-block.btn-labeled.btn-success(tabindex=4)
+            span.btn-label.pull-left
+              span.glyphicon.glyphicon-save
+            span=t('settings.save')      
