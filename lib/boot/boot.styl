@@ -77,6 +77,23 @@ a
 img.avatar
   border-radius 100%
 
+
+.badge
+  margin-left 7px
+  margin-bottom 2px
+  margin-top 4px
+  position relative
+  top -1px
+
+  &.staff
+    background #EF5350
+  &.elected
+    background #FF0000
+  &.city
+    background #D81E41
+  &.ambassador
+    background #FF9800
+
 .btn
   font-weight bold
   letter-spacing .1px
@@ -151,10 +168,29 @@ img.avatar
 
 label
   font-size .875em
+  &.inline
+    display inline
 
 .dropdown-menu
   border-radius 0
   text-transform none
+
+.f-toggle, a.f-toggle
+  span
+    color #999
+  .on
+    display none
+  .off
+    display inline-block
+  &.on
+    border-color #ddd
+    span
+      font-weight bold
+      color #555
+    .on
+      display inline-block
+    .off
+      display none
 
 .alert
   color white
@@ -220,7 +256,7 @@ body.browser-page
     display none
 
 section.site-content
-  margin-top header_height
+  padding-top header_height
   top 0
   left nav_proposal_width
   right 0

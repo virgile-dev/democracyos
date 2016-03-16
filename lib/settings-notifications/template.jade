@@ -11,7 +11,10 @@
       .form-group.new-topic.checkbox
         label(for='new-topic') #{t('settings.notifications.new-topic')}
       .form-group.replies.checkbox
-        label(for='replies') #{t('settings.notificatoins.someone-replies-your-comments')}
+        label(for='replies') #{t('settings.notifications.someone-replies-your-comments')}
+      - if(user.staff)
+        .form-group.replies.checkbox
+          label(for='new-comment') #{t('settings.notifications.new-comment')}
       .form-group.row.actions
         .col-xs-12.col-md-6.col-md-offset-3
           button.btn.btn-block.btn-labeled.btn-success(tabindex=4)

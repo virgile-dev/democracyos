@@ -187,7 +187,7 @@
   "settings.notifications": "Zawiadomienia",
   "settings.notifications.new-topic": "Nowy temat jest opublikowany",
   "settings.notifications.title": "Ustawienia zawiadomień",
-  "settings.notificatoins.someone-replies-your-comments": "Ktoś odpowie na twój komentarz",
+  "settings.notifications.someone-replies-your-comments": "Ktoś odpowie na twój komentarz",
   "settings.password-invalid": "Obecne hasło jest nieprawidłowe",
   "settings.password-updated": "Twoje hasło zostało zaktualizowane",
   "settings.paste-url-image": "Lub wklej URL obrazka tutaj...",

@@ -12,7 +12,7 @@
     .topic-admin
       .heading
         h1
-          i.fa.fa-user
+          i.fa.fa-edit
           =t(form.title)
         
         .commands
@@ -20,7 +20,7 @@
             span.btn-label
               i.fa.fa-floppy-o
             span= t('admin-topics-form.button.submit')
-          a.btn.btn-primary.btn-labeled.make-private(class=topic.public && topic.id ? '' : 'hide')
+          a.btn.btn-info.btn-labeled.make-private(class=topic.public && topic.id ? '' : 'hide')
             span.btn-label
               i.fa.fa-eye-slash
             span= t('admin-topics-form.button.make-private')
@@ -33,6 +33,10 @@
               span.btn-label
                 i.fa.fa-trash
               span= t('admin-topics-form.delete-topic.button.delete')
+            a.btn.btn-primary.btn-labeled.view(href=topic.url)
+              span.btn-label
+                i.fa.fa-external-link
+              span Voir
       form(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
         input(type='hidden', name='_topic_id_', value=topic.id)
         ul.form-messages
@@ -40,7 +44,7 @@
           label= t('admin-topics-form.label.forum')
           select.form-control(name='forum', tabindex=1, validate='required')
             - each forum in forums
-              option(selected= topic.forum ? forum.id === topic.forum.id : false, value=forum.id)= forum.name
+              option(selected= topic.forum ? forum.id === topic.forum.id : false, value=forum.id)= forum.title
         .form-group
           label= t('admin-topics-form.label.mediaTitle')
           input.form-control(type='text', id="mediaTitle", name='mediaTitle', tabindex=2, placeholder=t('admin-topics-form.label.mediaTitle'), value=topic.mediaTitle, validate='required')
@@ -102,11 +106,11 @@
         span.btn-label
           i.fa.fa-floppy-o
         span= t('admin-topics-form.button.submit')
-      a.btn.btn-primary.btn-labeled.make-private(class=topic.public && topic.id ? '' : 'hide')
+      a.btn.btn-info.btn-labeled.make-private(class=topic.public && topic.id ? '' : 'hide')
         span.btn-label
           i.fa.fa-eye-slash
         span= t('admin-topics-form.button.make-private')
-      a.btn.btn-primary.btn-labeled.make-public(class=topic.draft && topic.id ? '' : 'hide')
+      a.btn.btn-info.btn-labeled.make-public(class=topic.draft && topic.id ? '' : 'hide')
         span.btn-label
           i.fa.fa-eye
         span= t('admin-topics-form.button.make-public')
@@ -115,3 +119,7 @@
           span.btn-label
             i.fa.fa-trash
           span= t('admin-topics-form.delete-topic.button.delete')
+        a.btn.btn-primary.btn-labeled.view(href=topic.url)
+          span.btn-label
+            i.fa.fa-external-link
+          span Voir

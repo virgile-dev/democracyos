@@ -242,7 +242,7 @@
   "settings.notifications": "Сообщения",
   "settings.notifications.new-topic": "Опубликовано новую тему",
   "settings.notifications.title": "Настройки уведомлений",
-  "settings.notificatoins.someone-replies-your-comments": "Кто-то ответил на один из Ваших комментариев",
+  "settings.notifications.someone-replies-your-comments": "Кто-то ответил на один из Ваших комментариев",
   "settings.password-invalid": "Текущий пароль неверный",
   "settings.password-updated": "Ваш пароль успешно обновлен",
   "settings.paste-url-image": "Или вставить URL изображения здесь ...",

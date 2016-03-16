@@ -242,7 +242,7 @@
   "settings.notifications": "Notifications",
   "settings.notifications.new-topic": "Un nou tema es publica",
   "settings.notifications.title": "Configuració de Notificacions",
-  "settings.notificatoins.someone-replies-your-comments": "Algú respon a un dels seus comentaris",
+  "settings.notifications.someone-replies-your-comments": "Algú respon a un dels seus comentaris",
   "settings.password-invalid": "Current password is invalid",
   "settings.password-updated": "Your password was successfuly updated",
   "settings.paste-url-image": "O enganxar un URL de la imatge aquí ...",

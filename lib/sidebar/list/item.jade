@@ -8,7 +8,8 @@ li(data-id=item.id, class=active ? 'active' : '')
 
     .item-badges
       if voted
-        include ./check
+        .voted
+          i.fa.fa-check
 
     span.title= item.mediaTitle
     span.created-by

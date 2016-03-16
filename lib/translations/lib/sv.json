@@ -242,7 +242,7 @@
   "settings.notifications": "Notifikationer",
   "settings.notifications.new-topic": "Ett nytt ämne postas",
   "settings.notifications.title": "Notifikationsinställningar",
-  "settings.notificatoins.someone-replies-your-comments": "Någon svarar på dina kommentarer",
+  "settings.notifications.someone-replies-your-comments": "Någon svarar på dina kommentarer",
   "settings.password-invalid": "Nuvarande lösenord är felaktigt",
   "settings.password-updated": "Ditt lösenord har ändrats",
   "settings.paste-url-image": "Eller mata in en webbadress till önskad bild här...",

@@ -3,9 +3,9 @@
 #tag-wrapper.admin-wrapper
   .tag-admin
     .heading
-      .circle
-        i.fa.fa-user
-      h1= t(form.title)
+      h1
+        i.fa.fa-tag
+        =t(form.title)
     form.form(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
       .form-group

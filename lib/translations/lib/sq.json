@@ -317,7 +317,7 @@
     "settings.notifications": "Njoftime",
     "settings.notifications.new-topic": "Një temë e re merr botuar",
     "settings.notifications.title": "Njoftime settings",
-    "settings.notificatoins.someone-replies-your-comments": "Dikush i përgjigjet një nga komentet tuaja",
+    "settings.notifications.someone-replies-your-comments": "Dikush i përgjigjet një nga komentet tuaja",
     "settings.password-invalid": "Fjalëkalimi i tanishëm është i pavlefshëm",
     "settings.password-updated": "Fjalëkalimi juaj u rifreskua me sukses",
     "settings.paste-url-image": "Ose paste një imazh URL këtu ...",

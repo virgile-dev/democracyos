@@ -7,8 +7,9 @@
 
     h1#logo
       a(href=config.homeLink || '#{config.subPath}/')
-        span= config.organizationName
-
+        span.hidden-xs= config.organizationName
+        i.fa.fa-home.fa-lg.visible-xs-inline-block
+      
   .user-nav.btn-group
     .user
     - var color = config.headerFontColor;

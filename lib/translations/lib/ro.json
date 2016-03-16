@@ -270,7 +270,7 @@
   "settings.notifications": "Notificări",
   "settings.notifications.new-topic": "Un nou subiect este publicat",
   "settings.notifications.title": "Seteri pentru notificări",
-  "settings.notificatoins.someone-replies-your-comments": "Cineva a răspuns la unul dintre comentariile tale",
+  "settings.notifications.someone-replies-your-comments": "Cineva a răspuns la unul dintre comentariile tale",
   "settings.password-invalid": "Parola curentă este invalidă",
   "settings.password-updated": "Parola a fost modificată cu succes",
   "settings.paste-url-image": "Sau adaugă URL-ul unei imagini aici...",

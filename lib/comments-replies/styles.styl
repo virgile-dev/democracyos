@@ -9,6 +9,11 @@
       list-style-type none
       min-height 80px
 
+      padding-left 40px
+
+      &:hover .media-heading .actions
+        opacity 1
+
       &.remove
         background-color #f9f9f9
         .btn-reply-remove
@@ -25,49 +30,46 @@
       &:last-child
         border-bottom 0px
 
-      .media-object
-        width 30px
-        height 30px
+      .media
+        .media-object
+          width 30px
+          height 30px
 
-      .media-heading
-        font-size 90%
-        .badge
-          font-size 80%
-          margin-right 0
-        small.ago
-          font-size 75%
-          margin-left 0
-        .actions
-          opacity 0
+        .media-heading
+          font-size 90%
+          .badge
+            font-size 80%
+            margin-right 0
+          small.ago
+            font-size 75%
+            margin-left 0
+          .actions
+            opacity 0
 
-      &:hover .media-heading .actions
-        opacity 1
+        .media-body
+          position relative
 
-      .media-body
-        position relative
+      .reply-edit-form
+        display none
 
+      &.edit
+        .reply-body
+          display none
         .reply-edit-form
-          display none
+          display block
 
-        &.edit
-          .reply-body
-            display none
-          .reply-edit-form
-            display block
+      .comment-edit-form
+        display none
 
-        .comment-edit-form
-          display none
-
-        img
-          width 42px
-          height 42px
+      img
+        width 42px
+        height 42px
 
       .reply-text
         padding 10px 15px
         background-color: white
         border-radius: 5px
         margin: 15px auto
-        max-width 390px
 
   .reply-form
     min-height 180px

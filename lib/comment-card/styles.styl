@@ -1,5 +1,5 @@
 .comment-item
-  max-width 580px
+  max-width content_width
   margin 6px auto
 
   &.spam .spam-message
@@ -40,8 +40,6 @@
 
   .media-heading
     cursor default
-    .badge
-      margin-right 0
     small.ago
       margin-left 10px
 
@@ -194,23 +192,33 @@
     .fa-reply
       margin-right 4px
 
-  .comment-reply
-    margin-top 4px
-    font-size 13px
-    .fa-reply
-      margin-right 4px
-
   .comment-text
     padding 6px
     min-height 40px
     color #333
     word-break break-word
-
+    font-weight 300
+    font-size 16.5px
     p
+      font-weight 300
+      font-size 16px
       margin-bottom 0
     a
       display inline
       margin-bottom 12px
+    h1, h2, h3, h4
+      &:first-child
+        margin-top 0
+    h1
+      font-size 24px
+    h2
+      font-size 20px
+    h3
+      font-size 18px
+    h4
+      font-size 14px
+      text-transform uppercase
+      font-weight bold
 
   .oncomment,
   .onreply

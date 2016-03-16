@@ -1,44 +1,137 @@
+- var currentUser = user 
 #users-wrapper.admin-wrapper
   .users-admin
-    .row
-      .list.list-group
-        - each user in users
-          .list-group-item.user-item
-            .media
+    .actions.well
+      .row
+        .col-xs-12.col-md-8
+          .input-group.input-group-md
+            span.input-group-addon
+              i.glyphicon.glyphicon-search
+            input.form-control.search(type='text', placeholder='#{t("admin-users.list.search.placeholder")}', autofocus)
+        .col-xs-12.col-md-4
+          button.btn.btn-primary.btn-block.dropdown-toggle(type='button',data-toggle='dropdown')
+            =t('admin-users.list.sort')
+          ul.dropdown-menu.dropdown-menu-right
+            li
+              a.sort(data-sort='createdAt')
+                i.fa.fa-calendar-check-o
+                =t('admin-users.list.sort.date')
+            li
+              a.sort(data-sort='lastName')
+                i.fa.fa-sort-alpha-asc
+                =t('settings.last-name')
+            li
+              a.filter.staff
+                i.fa.fa-circle.fa-staff
+                span=t('admin-users.list.staff')
+            li
+              a.filter.elected
+                i.fa.fa-circle.fa-elected
+                span=t('settings.role.elected')
+            li
+              a.filter.city
+                i.fa.fa-circle.fa-city
+                span=t('settings.role.city')
+            li
+              a.filter.ambassador
+                i.fa.fa-circle.fa-ambassador
+                span=t('settings.role.ambassador')
+    .list.list-group
+      - each user in users
+        .list-group-item.user-item(data-id=user.id)
+          .media.row
+            .cols-xs-12.col-md-8
               .media-left
                 img.media-object(src=user.avatar)
               .media-body
-                .row
-                  .cols-xs-12.col-md-8
-                    h4
-                      span=user.fullName
-                      - if (user.staff)
-                        span.badge.staff=t("admin-users.list.staff")
-                      - if(user.roles)
-                        - var roles = user.roles
-                        each role in roles
-                          span.badge(class=role)=t("settings.role."+role)
-                      
+                  h4
+                    span.fullName=user.fullName
+                    span.lastName.hide=user.lastName
+                    span.id.hide=user.id
+                    - if (user.staff)
+                      span.badge.staff=t('admin-users.list.staff')
+                    - if(user.roles)
+                      - var roles = user.roles
+                      each role in roles
+                        span.badge.role(class=role)=t('settings.role.'+role)
+                  p.info
+                    i.fa.fa-envelope-o
+                    span.email=user.email 
+                  p.info
+                    i.fa.fa-calendar-check-o
+                    span.createdAt.hide=user.createdAt
+                    span=t('admin-users.list.sort.date')
+                    | &nbsp;
+                    i.ago(data-time=user.createdAt.toString())
+                  - if (user.location)
                     p.info
-                      i.fa.fa-envelope-o
-                      span=user.email 
-                    - if (user.location)
-                      p.info
-                        i.fa.fa-map-marker
-                        span= t('settings.location.' + user.location) 
-                    - if (user.age)
-                      p.info
-                        i.fa.fa-birthday-cake
-                        span= t('settings.age.' + user.age) 
-                    - if (user.activities.live)
-                      p.info
-                        i.fa.fa-street-view
-                        span= t('settings.activity.live') 
-                    - if (user.activities.work)
-                      p.info
-                        i.fa.fa-street-view
-                        span= t('settings.activity.work') 
-                    - if (user.activities.study)
-                      p.info
-                        i.fa.fa-street-view
-                        span= t('settings.activity.study') 
+                      i.fa.fa-map-marker
+                      span= t('settings.location.' + user.location) 
+                  - if (user.age)
+                    p.info
+                      i.fa.fa-birthday-cake
+                      span= t('settings.age.' + user.age) 
+                  - if (user.activities.live)
+                    p.info
+                      i.fa.fa-street-view
+                      span.activity-live= t('settings.activity.live') 
+                  - if (user.activities.work)
+                    p.info
+                      i.fa.fa-suitcase
+                      span.activity-work= t('settings.activity.work') 
+                  - if (user.activities.study)
+                    p.info
+                      i.fa.fa-graduation-cap
+                      span.activity-study= t('settings.activity.study') 
+            - if (currentUser.staff)
+              .cols-xs-12.col-md-4
+                .list-group.actions
+                  - var toggleStatusClass = user.status=='active'?'on':'off'
+                  a.list-group-item.f-toggle.f-status(class=toggleStatusClass)
+                    .pull-right
+                      i.refresh.fa.fa-refresh.fa-spin.hide
+                      i.ok.fa.fa-check.hide
+                      i.ko.fa.fa-exclamation.hide
+                    .on
+                      i.fa.fa-circle.fa-active
+                      span=t('admin-users-form.enabled')
+                    .off
+                      i.fa.fa-circle
+                      span=t('admin-users-form.disabled')
+                  - var toggleElectedClass = user.roles.includes('elected')?'on':'off'
+                  a.list-group-item.f-toggle.f-elected(class=toggleElectedClass)
+                    .pull-right
+                      i.refresh.fa.fa-refresh.fa-spin.hide
+                      i.ok.fa.fa-check.hide
+                      i.ko.fa.fa-exclamation.hide
+                    .on
+                      i.fa.fa-circle.fa-elected
+                    .off
+                      i.fa.fa-circle
+                    span=t('settings.role.elected')
+                  - var toggleCityClass = user.roles.includes('city')?'on':'off'
+                  a.list-group-item.f-toggle.f-city(class=toggleCityClass)
+                    .pull-right
+                      i.refresh.fa.fa-refresh.fa-spin.hide
+                      i.ok.fa.fa-check.hide
+                      i.ko.fa.fa-exclamation.hide
+                    .on
+                      i.fa.fa-circle.fa-city
+                    .off
+                      i.fa.fa-circle
+                    span=t('settings.role.city')
+                  - var toggleAmbassadorClass = user.roles.includes('ambassador')?'on':'off'
+                  a.list-group-item.f-toggle.f-ambassador(class=toggleAmbassadorClass)
+                    .pull-right
+                      i.refresh.fa.fa-refresh.fa-spin.hide
+                      i.ok.fa.fa-check.hide
+                      i.ko.fa.fa-exclamation.hide                
+                    .on
+                      i.fa.fa-circle.fa-ambassador
+                    .off
+                      i.fa.fa-circle
+                    span=t('settings.role.ambassador')
+
+                  
+                      
+                      
