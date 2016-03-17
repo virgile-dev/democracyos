@@ -21,6 +21,9 @@
     .comment-actions
       display none
 
+  .media
+    overflow visible
+
   .media-left
     width 46px
     margin-right 20px
@@ -74,14 +77,15 @@
     -o-transition all 0.3s ease
     transition all 0.3s ease
 
-    .comment-form
-      display none
+  .comment-form
+    display none
+    margin-top 25px
 
-    &.edit
-      .comment-body
-        display none
-      .comment-form
-        display block
+  .comment-panel.edit
+    .comment-body
+      display none
+    .comment-form
+      display block
 
   .count
     font-size 12px
@@ -94,6 +98,12 @@
     margin: 15px auto
     .spam-message
       display none
+    .more-link
+      margin-left 5px
+      line-height 38px
+      font-style italic
+      font-weight normal
+      font-size 13px
 
   .comment-alias-from
     font-size 80%

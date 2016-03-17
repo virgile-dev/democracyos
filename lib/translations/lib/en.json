@@ -421,5 +421,7 @@
   "validators.password.not.match": "Passwords do not match",
   "validators.required": "Required",
   "admin-users-form.enabled": "active",
-  "admin-users-form.disabled": "disabled"
+  "admin-users-form.disabled": "disabled",
+  "comments.read-more": "show more",
+  "comments.read-less": "show less"
 }

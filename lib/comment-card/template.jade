@@ -49,26 +49,27 @@ li.comment-item(class=classes)
       - if (comment.count)
         div.count
           span= comment.count + ' ' + t('comment-card.count')
-  .comment-body
-    .comment-text!=markdown(comment.text)
-    - if (own || user.staff)
-      .oncomment.remove-comment= t('comments.arguments.confirm-remove')
-        -if (!own && user.staff)
-          br
-          =t('comments.removing-argument')
-        .remove-confirm-actions
-          a.confirm-remove(href='#')= t('common.ok')
-          a.cancel-remove(href='#')= t('common.cancel')
-    .oncomment.message
-      p.spam-message=t('comment-card.flagged-as-spam')
-        | .
-        span.show-spam: a(href='#')= t('comment-card.show')
-  .comment-form
-  - if (comment.alias)
-    .comment-alias-from
-      span.title=t('comments.alias.from')
-      img.avatar(src=avatar, title=comment.author.displayName)
-      span.name #{comment.author.fullName}
+  .comment-panel
+    .comment-body
+      .comment-text!=markdown(comment.text)
+      - if (own || user.staff)
+        .oncomment.remove-comment= t('comments.arguments.confirm-remove')
+          -if (!own && user.staff)
+            br
+            =t('comments.removing-argument')
+          .remove-confirm-actions
+            a.confirm-remove(href='#')= t('common.ok')
+            a.cancel-remove(href='#')= t('common.cancel')
+      .oncomment.message
+        p.spam-message=t('comment-card.flagged-as-spam')
+          | .
+          span.show-spam: a(href='#')= t('comment-card.show')
+    .comment-form
+    - if (comment.alias)
+      .comment-alias-from
+        span.title=t('comments.alias.from')
+        img.avatar(src=avatar, title=comment.author.displayName)
+        span.name #{comment.author.fullName}
   .comment-actions.btn-toolbar(role='toolbar')
     - if (repliesCounter)
       .btn-group(role='group')
