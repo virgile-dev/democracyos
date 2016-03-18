@@ -26,6 +26,7 @@
               a.sort(data-sort='topic-title')
                 i.fa.fa-sort-alpha-asc
                 =t('admin-topics-form.label.mediaTitle')
+                  
     .list.list-group
       - each topic in topics
         a.list-group-item(href="#{config.subPath}/admin/topics/" + topic.id, data-topicid=topic.id)
