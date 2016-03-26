@@ -50,9 +50,9 @@ mixin btn-new-comment
             .form-group
               .input-group
                 span.input-group-addon
-                  input(type='checkbox',name='asAlias')
+                  input(type='checkbox',id='asAlias',name='asAlias')
                 input.form-control(type='text', name='alias', tabindex=2, placeholder=t('comments.alias.placeholder'))
-            .form-inline
+            .form-inline.people-count-row.hide
               .form-group
                 label(for='peopleCount')= t('comments.count.title')
                 input.form-control(type='text', id='peopleCount', name='peopleCount', tabindex=3, size=3)
@@ -64,9 +64,9 @@ mixin btn-new-comment
     - if (!logged)
       .signup-info
         p.text-mute= t('comments.sign-in-required')
-        - var signinUrl = '#{config.subPath}/signin?reference=' + reference
+        - var signinUrl = config.subPath + '/signin?reference=' + reference
         a(href=signinUrl)= t('signin.login')
         | &nbsp;#{t('common.or')}&nbsp;
-        - var signupUrl = '#{config.subPath}/signup?reference=' + reference
+        - var signupUrl = config.subPath + '/signup?reference=' + reference
         a(href=signupUrl)= t('signin.signup')
       

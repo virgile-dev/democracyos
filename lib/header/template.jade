@@ -8,8 +8,9 @@
     h1#logo
       a(href=config.homeLink || '#{config.subPath}/')
         span.hidden-xs= config.organizationName
-        i.fa.fa-home.fa-lg.visible-xs-inline-block
-      
+        - if (!!config.logoMobile)
+          img(src=(config.subPath + config.logoMobile)).logo-image.visible-xs-inline-block
+        
   .user-nav.btn-group
     .user
     - var color = config.headerFontColor;
