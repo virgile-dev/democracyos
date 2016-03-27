@@ -423,5 +423,7 @@
   "admin-users-form.enabled": "active",
   "admin-users-form.disabled": "disabled",
   "comments.read-more": "show more",
-  "comments.read-less": "show less"
+  "comments.read-less": "show less",
+  "settings.profile.alert.action": "Complete your profile",
+  "settings.profile.alert.message": "Please complete your profile by clicking <a href='{subPath}/settings/profile'>here</a>."
 }

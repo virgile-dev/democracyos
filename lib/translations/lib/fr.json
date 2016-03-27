@@ -375,7 +375,7 @@
   "signin.signup": "S'inscrire",
   "signup.accepting": "En vous inscrivant, vous acceptez nos",
   "signup.being-redirected": "Vous serez redirigé dans 5 secondes",
-  "signup.browsing": "naviguer",
+  "signup.browsing": "Naviguer",
   "signup.check-email": "Merci d'ouvrir l'email que nous vous avons envoyé (n'oubliez-pas de regarder aussi dans les emails indésirables) et de cliquer sur le lien fourni.",
   "signup.complete": "Inscription complète",
   "signup.email": "email",
@@ -423,5 +423,7 @@
   "admin-users-form.enabled": "actif",
   "admin-users-form.disabled": "inactif",
   "comments.read-more": "afficher plus",
-  "comments.read-less": "masquer"
+  "comments.read-less": "masquer",
+  "settings.profile.alert.action": "Complèter votre profil",
+  "settings.profile.alert.message": "Merci de compléter votre profil en cliquant <a class='alert-link' href='{subPath}/settings/profile'>ici</a>."
 }
