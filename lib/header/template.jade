@@ -7,8 +7,11 @@
 
     h1#logo
       a(href=config.homeLink || '#{config.subPath}/')
-        span.hidden-xs= config.organizationName
-        - if (!!config.logoMobile)
+        //span.hidden-xs= config.organizationName
+        - var mobileLogo = !!config.logoMobile
+        - var classes = mobileLogo ? 'hidden-xs' : ''
+        img(src=config.logo, class=classes).logo-image
+        - if (mobileLog)
           img(src=(config.subPath + config.logoMobile)).logo-image.visible-xs-inline-block
         
   .user-nav.btn-group
