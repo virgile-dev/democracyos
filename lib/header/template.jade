@@ -11,7 +11,7 @@
         - var mobileLogo = !!config.logoMobile
         - var classes = mobileLogo ? 'hidden-xs' : ''
         img(src=config.logo, class=classes).logo-image
-        - if (mobileLog)
+        - if (mobileLogo)
           img(src=(config.subPath + config.logoMobile)).logo-image.visible-xs-inline-block
         
   .user-nav.btn-group
