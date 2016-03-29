@@ -1,4 +1,5 @@
 - var closed = proposal.closed
+- var logged = user.logged()
 .inner-container
   - var learnMore = config.learnMoreUrl
   - if (learnMore)
@@ -7,7 +8,7 @@
       span #{t('proposal-article.article.alert.text')}&nbsp;&nbsp;
       a.alert-link(href=learnMore, target="_blank") #{t('proposal-article.article.alert.learn-more')}
 
-  - if (!user.updatedAt)
+  - if ( logged && !user.updatedAt )
     div.alert.alert-info.alert-dismissable.system-alert
       button(type="button", class="close", data-dismiss="alert", aria-hidden="true")
       i.fa.fa-lg.fa-info-circle
