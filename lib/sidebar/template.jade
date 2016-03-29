@@ -1,8 +1,8 @@
 nav#sidebar
-  #action-buttons.text-center
+  .text-center(style='padding: 15.5px 20px 5px')
     - var existCallToActionUrl = !!config.callToActionUrl
     - if (existCallToActionUrl)
-      a(href=(config.subPath + config.callToActionUrl)).btn.btn-primary.btn-block
+      a(href=(config.subPath + config.callToActionUrl), title=t('sidebar.call-to-action')).btn.btn-info.btn-block
         span Poser une question au maire
   .filter-container(data-sidebar-filter)
   .list-container(data-sidebar-list)
