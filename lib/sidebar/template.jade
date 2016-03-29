@@ -3,7 +3,7 @@ nav#sidebar
     - var existCallToActionUrl = !!config.callToActionUrl
     - if (existCallToActionUrl)
       a(href=(config.subPath + config.callToActionUrl), title=t('sidebar.call-to-action')).btn.btn-info.btn-block
-        span Poser une question au maire
+        span t('sidebar.call-to-action')
   .filter-container(data-sidebar-filter)
   .list-container(data-sidebar-list)
 
