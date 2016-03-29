@@ -89,7 +89,8 @@
     "availableLocales",
     "domainWhiteList",
     "showCommentsReplies",
-    "subPath"
+    "subPath",
+    "callToActionUrl"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -148,5 +149,6 @@
     "uk",
     "zh_TW"
   ],
-  "enforceLocale": false
+  "enforceLocale": false,
+  "callToActionUrl": ""
 }
