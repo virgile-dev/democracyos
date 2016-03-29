@@ -1,8 +1,6 @@
 nav#sidebar
   #action-buttons.text-center
-    - var existCallToActionUrl = !!config.callToActionUrl
-    - if (existCallToActionUrl)
-      a(href=(config.subPath + config.callToActionUrl)).btn.btn-primary.btn-block
-        span= Poser une question au maire
+    a(href="#").btn.btn-primary.btn-block
+      span= Poser une question au maire
   .filter-container(data-sidebar-filter)
   .list-container(data-sidebar-list)
