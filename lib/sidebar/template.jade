@@ -2,7 +2,7 @@ nav#sidebar
   #action-buttons.text-center
     - var callToActionUrl = !!config.callToActionUrl
     - if (callToActionUrl)
-      a(href=(config.subPath + config.callToActionUrl), title=t('sidebar.call-to-action')).btn.btn-primary.btn-block
+      a(href=(config.subPath + config.callToActionUrl)).btn.btn-primary.btn-block
         span= Poser une question au maire
   .filter-container(data-sidebar-filter)
   .list-container(data-sidebar-list)
