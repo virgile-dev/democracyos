@@ -32,10 +32,6 @@
               a.filter.city
                 i.fa.fa-circle.fa-city
                 span=t('settings.role.city')
-            li
-              a.filter.ambassador
-                i.fa.fa-circle.fa-ambassador
-                span=t('settings.role.ambassador')
     .list.list-group
       - each user in users
         .list-group-item.user-item(data-id=user.id)
@@ -120,17 +116,6 @@
                     .off
                       i.fa.fa-circle
                     span=t('settings.role.city')
-                  - var toggleAmbassadorClass = user.roles.includes('ambassador')?'on':'off'
-                  a.list-group-item.f-toggle.f-ambassador(class=toggleAmbassadorClass)
-                    .pull-right
-                      i.refresh.fa.fa-refresh.fa-spin.hide
-                      i.ok.fa.fa-check.hide
-                      i.ko.fa.fa-exclamation.hide                
-                    .on
-                      i.fa.fa-circle.fa-ambassador
-                    .off
-                      i.fa.fa-circle
-                    span=t('settings.role.ambassador')
 
                   
                       
