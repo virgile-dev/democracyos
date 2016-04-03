@@ -348,6 +348,7 @@
   "settings.password-updated": "Votre mot de passe a été actualisé avec succès",
   "settings.paste-url-image": "Ou coller une URL de l'image ici ...",
   "settings.profile": "Profil",
+  "settings.pick_a_pic": "Sélectionnez une image",
   "settings.role": "Rôle(s)",
   "settings.role.city": "Ville de Paris",
   "settings.role.elected": "Élu(e)",
