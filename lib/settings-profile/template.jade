@@ -8,7 +8,7 @@
       ul.form-messages
       .form-group.profile-picture
         .image-container
-          img(src=user.profilePicture(), width="65")
+          img(src=user.profilePicture(), width="65",id="userProfilePicture")
         .controls
           - if (user.profileType==='facebook')
             a(href="https://facebook.com", target="_blank")
@@ -21,7 +21,7 @@
               strong= t('settings.change-at-gravatar')
           input.form-control(type='text', name='profilePictureUrl', tabindex=1, placeholder=t('settings.paste-url-image'), value=user.profilePictureUrl, validate='url')
       //- WIP Sélectionnez une photo
-      p#status t('settings.pick_a_pic')
+      p#status= t('settings.pick_a_pic')
       input(type='file', id='file_input', style='padding: 0px 0px 24px')
       .form-group
         label #{t('settings.first-name')}
