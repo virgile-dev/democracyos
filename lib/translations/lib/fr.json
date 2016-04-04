@@ -349,6 +349,7 @@
   "settings.paste-url-image": "Ou coller une URL de l'image ici ...",
   "settings.profile": "Profil",
   "settings.pick_a_pic": "Sélectionnez une image",
+  "settings.pick_a_pic.no_file_selected": "Aucun fichier sélectionné.",
   "settings.role": "Rôle(s)",
   "settings.role.city": "Ville de Paris",
   "settings.role.elected": "Élu(e)",
