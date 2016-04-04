@@ -53,7 +53,7 @@
     "url": "",
     "token": "",
     "mailer": {
-      "name": "L'équipe de crm.paris.fr",
+      "name": "crm.paris.fr",
       "email": "no-reply@democracyos.org",
       "service": "",
       "auth": {
