@@ -2,7 +2,8 @@
   .title-page
     .circle
       i.fa.fa-sign-in
-    h1= t('signin.login-to') + ' ' + t('common.app-name')
+    //- + ' ' + t('common.app-name')
+    h1= t('signin.login-to')
   form(action="#{config.subPath}/auth/facebook", method="get", role="form")
     button.btn.btn-block.btn-labeled.btn-default.btn-facebook(type="submit")
       span.btn-label.pull-left: i.fa.fa-facebook
