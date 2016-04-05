@@ -94,7 +94,7 @@
                     .off
                       i.fa.fa-circle
                       span=t('admin-users-form.disabled')
-                  - var toggleElectedClass = user.roles.includes('elected')?'on':'off'
+                  - var toggleElectedClass = (user.roles..indexOf('elected') >= 0)?'on':'off'
                   a.list-group-item.f-toggle.f-elected(class=toggleElectedClass)
                     .pull-right
                       i.refresh.fa.fa-refresh.fa-spin.hide
@@ -105,7 +105,7 @@
                     .off
                       i.fa.fa-circle
                     span=t('settings.role.elected')
-                  - var toggleCityClass = user.roles.includes('city')?'on':'off'
+                  - var toggleCityClass = (user.roles.indexOf('city') >= 0)?'on':'off'
                   a.list-group-item.f-toggle.f-city(class=toggleCityClass)
                     .pull-right
                       i.refresh.fa.fa-refresh.fa-spin.hide
