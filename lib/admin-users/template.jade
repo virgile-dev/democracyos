@@ -94,7 +94,7 @@
                     .off
                       i.fa.fa-circle
                       span=t('admin-users-form.disabled')
-                  - var toggleElectedClass = (user.roles..indexOf('elected') >= 0)?'on':'off'
+                  - var toggleElectedClass = (user.roles.indexOf('elected') >= 0)?'on':'off'
                   a.list-group-item.f-toggle.f-elected(class=toggleElectedClass)
                     .pull-right
                       i.refresh.fa.fa-refresh.fa-spin.hide
