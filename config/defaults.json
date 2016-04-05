@@ -5,14 +5,11 @@
   "publicPort": 3000,
   "subPath": "",
   "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
-  "upload": {
-    "enabled": false,
-    "cloudinaryUrl": "",
-    "amazon": {
-      "username": "",
-      "password": "",
-      "bucket": ""
-    }
+  "upload": false,
+  "amazon": {
+    "username": "",
+    "password": "",
+    "bucket": ""
   },
   "mongoUsersUrl": "",
   "jwtSecret": "Generate a secret token and paste it here.",
@@ -99,7 +96,8 @@
     "domainWhiteList",
     "showCommentsReplies",
     "subPath",
-    "callToActionUrl"
+    "callToActionUrl",
+    "upload"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
