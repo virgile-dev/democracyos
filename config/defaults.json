@@ -156,6 +156,7 @@
     "uk",
     "zh_TW"
   ],
+  "baseLocale": "en",
   "enforceLocale": false,
   "callToActionUrl": ""
 }
