@@ -27,11 +27,11 @@
             li
               a.filter.elected
                 i.fa.fa-circle.fa-elected
-                span=t('settings.role.elected')
+                span=t('settings.role.admin')
             li
               a.filter.city
                 i.fa.fa-circle.fa-city
-                span=t('settings.role.city')
+                span=t('settings.role.member')
     .list.list-group
       - each user in users
         .list-group-item.user-item(data-id=user.id)
@@ -104,7 +104,7 @@
                       i.fa.fa-circle.fa-elected
                     .off
                       i.fa.fa-circle
-                    span=t('settings.role.elected')
+                    span=t('settings.role.admin')
                   - var toggleCityClass = (user.roles.indexOf('city') >= 0)?'on':'off'
                   a.list-group-item.f-toggle.f-city(class=toggleCityClass)
                     .pull-right
@@ -115,7 +115,7 @@
                       i.fa.fa-circle.fa-city
                     .off
                       i.fa.fa-circle
-                    span=t('settings.role.city')
+                    span=t('settings.role.member')
 
                   
                       
