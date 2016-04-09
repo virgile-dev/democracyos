@@ -26,11 +26,11 @@
                 span=t('admin-users.list.staff')
             li
               a.filter.elected
-                i.fa.fa-circle.fa-elected
+                i.fa.fa-circle.f-member
                 span=t('settings.role.admin')
             li
-              a.filter.city
-                i.fa.fa-circle.fa-city
+              a.filter.member
+                i.fa.fa-circle.f-admin
                 span=t('settings.role.member')
     .list.list-group
       - each user in users
@@ -94,25 +94,25 @@
                     .off
                       i.fa.fa-circle
                       span=t('admin-users-form.disabled')
-                  - var toggleElectedClass = (user.roles.indexOf('elected') >= 0)?'on':'off'
-                  a.list-group-item.f-toggle.f-elected(class=toggleElectedClass)
+                  - var toggleMemberClass = (user.roles.indexOf('member') >= 0)?'on':'off'
+                  a.list-group-item.f-toggle.f-member(class=toggleMemberClass)
                     .pull-right
                       i.refresh.fa.fa-refresh.fa-spin.hide
                       i.ok.fa.fa-check.hide
                       i.ko.fa.fa-exclamation.hide
                     .on
-                      i.fa.fa-circle.fa-elected
+                      i.fa.fa-circle.f-member
                     .off
                       i.fa.fa-circle
                     span=t('settings.role.admin')
-                  - var toggleCityClass = (user.roles.indexOf('city') >= 0)?'on':'off'
-                  a.list-group-item.f-toggle.f-city(class=toggleCityClass)
+                  - var toggleAdminClass = (user.roles.indexOf('admin') >= 0)?'on':'off'
+                  a.list-group-item.f-toggle.f-admin(class=toggleAdminClass)
                     .pull-right
                       i.refresh.fa.fa-refresh.fa-spin.hide
                       i.ok.fa.fa-check.hide
                       i.ko.fa.fa-exclamation.hide
                     .on
-                      i.fa.fa-circle.fa-city
+                      i.fa.fa-circle.f-admin
                     .off
                       i.fa.fa-circle
                     span=t('settings.role.member')
