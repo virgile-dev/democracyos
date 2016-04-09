@@ -165,6 +165,8 @@
   "common.ok": "OK",
   "common.or": "ou",
   "common.read-more": "Lire la suite",
+  "common.save": "Sauvegarder",
+  "common.add": "Ajouter",
   "democracyos.markdown.flavored": "Editeur Markdown personnalisé de DemocracyOS",
   "forgot.error.email-not-valid": "Vous devez valider votre adresse email avant de pouvoir réinitialiser votre mot de passe",
   "forgot.explanation": "Vous allez recevoir par email un lien pour rétablir votre mot de passe",
@@ -354,8 +356,8 @@
   "settings.pick_a_pic.no_file_selected": "Aucun fichier sélectionné",
   "settings.pick_a_pic.change": "Changer",
   "settings.role": "Rôle(s)",
-  "settings.role.city": "Ville de Paris",
-  "settings.role.elected": "Élu(e)",
+  "settings.role.member": "asso",
+  "settings.role.admin": "CA",
   "settings.save": "Enregistrer",
   "settings.sessions": "Sessions",
   "settings.sidebar.forums": "Concertation(s)",
@@ -441,5 +443,10 @@
   "comments.read-more": "afficher plus",
   "comments.read-less": "masquer",
   "settings.profile.alert.action": "Complèter votre profil",
-  "settings.profile.alert.message": "Merci de compléter votre profil en cliquant <a class='alert-link' href='{subPath}/settings/profile'>ici</a>."
+  "settings.profile.alert.message": "Merci de compléter votre profil en cliquant <a class='alert-link' href='{subPath}/settings/profile'>ici</a>.",
+  "admin-forums-form.message.onsuccess": "Concertation sauvegardée avec succès",
+  "admin-forums-form.message.validation.name-required": "Nom requis",
+  "admin-forums-form.placeholder.name": "Nom de la catégorie",
+  "admin-forums-form.title.create": "Nouvelle concertation",
+  "admin-forums-form.title.edit": "Modifier la concertation"
 }

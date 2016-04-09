@@ -1,6 +1,10 @@
 #forum-wrapper.admin-wrapper
   .forum-admin
-    form.form(action="#{config.subPath}/api/forum", method="post", role="form", novalidate, autovalidate, autosubmit)
+    .heading
+      h1
+        i.fa.fa-folder
+        =t(form.title)
+    form.form(action=(config.subPath+form.action), method="post", role="form", novalidate, autovalidate, autosubmit)
       ul.form-errors
 
       .fieldsets
@@ -10,18 +14,18 @@
             div.input-group-addon
               span.desktop= domain
               span.mobile /
-            input(type='text', name='name', validate='required forum', autofocus, id='hostname', autocorrect='off', autocapitalize='off')
+            input(type='text', name='name', validate='required forum', autofocus, id='hostname', autocorrect='off', autocapitalize='off', value=forum.name)
             span.error.name-unavailable.hide=t('forum.form.url.unavailable')
 
         fieldset
           label= t('forum.form.title.label')
           .form-group.clearfix.title
-            input(type='text', name='title', placeholder= t('forum.form.title.placeholder'), validate='required')
+            input(type='text', name='title', value=forum.title, placeholder= t('forum.form.title.placeholder'), validate='required')
 
         fieldset
           label= t('forum.form.summary.label')
           .form-group.clearfix.summary
-            input(type='text', name='summary', placeholder= t('forum.form.summary.placeholder'), maxlength=300, validate='required max-length:300')
+            input(type='text', name='summary', value=forum.summary, placeholder= t('forum.form.summary.placeholder'), maxlength=300, validate='required max-length:300')
         
         fieldset
-          button.btn.btn-primary= t('forum.form.create.submit')
+          button.btn.btn-primary= t(form.submit)

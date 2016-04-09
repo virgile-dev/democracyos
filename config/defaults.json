@@ -5,7 +5,7 @@
   "publicPort": 3000,
   "subPath": "",
   "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
-  "upload": false,
+  "uploader": "",
   "amazon": {
     "username": "",
     "password": "",
@@ -97,7 +97,7 @@
     "showCommentsReplies",
     "subPath",
     "callToActionUrl",
-    "upload"
+    "uploader"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",

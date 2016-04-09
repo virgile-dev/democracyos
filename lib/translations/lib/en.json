@@ -165,6 +165,8 @@
   "common.ok": "OK",
   "common.or": "or",
   "common.read-more": "Read more",
+  "common.save": "Save",
+  "common.add": "Add",
   "democracyos.markdown.flavored": "DemocracyOS flavored markdown",
   "forgot.error.email-not-valid": "You must validate your email address before you can reset your account password",
   "forgot.explanation": "We will send an email with a link to reset your password",
@@ -441,5 +443,10 @@
   "comments.read-more": "show more",
   "comments.read-less": "show less",
   "settings.profile.alert.action": "Complete your profile",
-  "settings.profile.alert.message": "Please complete your profile by clicking <a href='{subPath}/settings/profile'>here</a>."
+  "settings.profile.alert.message": "Please complete your profile by clicking <a href='{subPath}/settings/profile'>here</a>.",
+  "admin-forums-form.message.onsuccess": "Concertation sauvegardée avec succès",
+  "admin-forums-form.message.validation.name-required": "Nom requis",
+  "admin-forums-form.placeholder.name": "Nom de la catégorie",
+  "admin-forums-form.title.create": "Nouvelle concertation",
+  "admin-forums-form.title.edit": "Modifier la concertation"
 }
