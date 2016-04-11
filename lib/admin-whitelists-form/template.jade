@@ -1,6 +1,6 @@
 #whitelist-wrapper
   .whitelist-admin
-    form.form.form-horizontal(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
+    form.form(action=(config.subPath+form.action), method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
       .form-group
         label=t('admin-whitelist.type')
@@ -13,7 +13,14 @@
           input.form-control(type='text', name='value', value=whitelist.value, validate='required email')
         - else
           textarea.form-control(type='text', name='value', validate='required emails' placeholder=t('admin-whitelists-form.value.placeholder'))
+      hr/
       .form-group
-        button.btn.btn-success.btn-block.btn-lg=t('admin-whitelists-form.button.submit')
+        button.btn.btn-success.btn-labeled.save
+          span.btn-label
+            i.fa.fa-floppy-o
+          span= t('admin-whitelists-form.button.submit')
         - if (whitelist.id)
-          a.btn.btn-danger.btn-block.btn-lg.btn-delete(href='#')=t('admin-whitelists-form.button.delete')
+          a.btn.btn-danger.btn-labeled.btn-delete(href='#')
+            span.btn-label
+              i.fa.fa-trash
+            span= t('admin-whitelists-form.button.delete')

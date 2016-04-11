@@ -97,7 +97,8 @@
     "showCommentsReplies",
     "subPath",
     "callToActionUrl",
-    "uploader"
+    "uploader",
+    "rules"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -132,6 +133,7 @@
   "googleAPIKey": "",
   "visibility": "visible",
   "usersWhitelist": false,
+  "rules": false,
   "multiForum": false,
   "tweetText": "",
   "forceSafeImageURLs": true,

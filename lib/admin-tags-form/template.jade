@@ -19,4 +19,8 @@
               input(type="radio", name="image", autocomplete="off", tabindex=tabindex++, value=image.name, checked= tag.image === image.name, validate='any:image')
               .tag-image-fill
                 i.fa(class=image.url)
-      .form-group: button.btn.btn-success.btn-block.btn-lg(tabindex=tabindex++)=t('admin-tags-form.button.submit')
+      .form-group
+        a.btn.btn-success.btn-labeled.btn-lg.save(tabindex=tabindex++)
+          span.btn-label
+            i.fa.fa-floppy-o
+          span= t('admin-tags-form.button.submit')

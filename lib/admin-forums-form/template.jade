@@ -6,7 +6,16 @@
         =t(form.title)
     form.form(action=(config.subPath+form.action), method="post", role="form", novalidate, autovalidate, autosubmit)
       ul.form-errors
-
+      .status-wrapper
+        .status.creating
+          .loader-wrapper: .loader
+          p= t('forum.status.creating')
+        .status.destroying
+          .loader-wrapper: .loader
+          p= t('forum.status.destroying')
+        .status.error
+          p= t('forum.status.error')
+        
       .fieldsets
         fieldset
           label= t('forum.form.url.label')
@@ -14,18 +23,26 @@
             div.input-group-addon
               span.desktop= domain
               span.mobile /
-            input(type='text', name='name', validate='required forum', autofocus, id='hostname', autocorrect='off', autocapitalize='off', value=forum.name)
+            input.form-control.f-name(type='text', name='name', validate='required forum', autofocus, id='hostname', autocorrect='off', autocapitalize='off', value=forum.name)
             span.error.name-unavailable.hide=t('forum.form.url.unavailable')
 
         fieldset
           label= t('forum.form.title.label')
           .form-group.clearfix.title
-            input(type='text', name='title', value=forum.title, placeholder= t('forum.form.title.placeholder'), validate='required')
+            input.form-control.f-title(type='text', name='title', value=forum.title, placeholder= t('forum.form.title.placeholder'), validate='required')
 
         fieldset
           label= t('forum.form.summary.label')
           .form-group.clearfix.summary
-            input(type='text', name='summary', value=forum.summary, placeholder= t('forum.form.summary.placeholder'), maxlength=300, validate='required max-length:300')
+            input.form-control.f-summary(type='text', name='summary', value=forum.summary, placeholder= t('forum.form.summary.placeholder'), maxlength=300, validate='required max-length:300')
         
-        fieldset
-          button.btn.btn-primary= t(form.submit)
+        fieldset.commands
+          button.btn.btn-primary.btn-labeled
+            span.btn-label.pull-left
+              span(class=form.icon)
+            span= t(form.submit)
+          - if (forum.id)
+            a.btn.btn-danger.btn-labeled.btn-delete
+              span.btn-label
+                i.fa.fa-trash
+              span= t('admin-topics-form.delete-topic.button.delete')
