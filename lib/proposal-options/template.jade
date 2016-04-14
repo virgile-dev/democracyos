@@ -26,26 +26,25 @@
           i.fa.fa-refresh
           small #{t('proposal-options.change-vote')}.
       
-      - if(credentials)
-        .vote-options(class= voted || closed ? 'hide' : '')
-          h5= t('proposal-options.vote')
-          .direct-vote
-            a.vote-option.vote-yes(href="#", data-proposal=proposal.id)
-              i.flaticon.solid.thumbs-up-1
-              span= t('proposal-options.yea')
-            a.vote-option.vote-abstain(href="#", data-proposal=proposal.id)
-              i.flaticon.solid.pause
-              span= t('proposal-options.abstain')
-            a.vote-option.vote-no(href="#", data-proposal=proposal.id)
-              i.flaticon.solid.thumbs-up-1
-              span= t('proposal-options.nay')
+      .vote-options(class= voted || closed ? 'hide' : '')
+        h5= t('proposal-options.vote')
+        .direct-vote
+          a.vote-option.vote-yes(href="#", data-proposal=proposal.id)
+            i.flaticon.solid.thumbs-up-1
+            span= t('proposal-options.yea')
+          a.vote-option.vote-abstain(href="#", data-proposal=proposal.id)
+            i.flaticon.solid.pause
+            span= t('proposal-options.abstain')
+          a.vote-option.vote-no(href="#", data-proposal=proposal.id)
+            i.flaticon.solid.thumbs-up-1
+            span= t('proposal-options.nay')
 
-          - if (!user.id)
-            p.text-mute.overlay-vote.hide= t('proposal-options.must-be-signed-in') + '. '
-              a(href="#{config.subPath}/signin")= t('signin.login')
-              = ' ' + t('common.or') + ' '
-              a(href="#{config.subPath}/signup?reference=" + reference)= t('signin.signup')
-              = '.'
+        - if (!user.id)
+          p.text-mute.overlay-vote.hide= t('proposal-options.must-be-signed-in') + '. '
+            a(href="#{config.subPath}/signin")= t('signin.login')
+            = ' ' + t('common.or') + ' '
+            a(href="#{config.subPath}/signup?reference=" + reference)= t('signin.signup')
+            = '.'
 
       .votes-cast
         em.text-muted= t('proposal-options.votes-cast', { num: census.length || "0" })
