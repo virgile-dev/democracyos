@@ -21,17 +21,17 @@
                 i.fa.fa-sort-alpha-asc
                 =t('settings.last-name')
             li
+              a.filter.member
+                i.fa.fa-circle.f-member
+                span=t('settings.role.member')
+            li
+              a.filter.admin
+                i.fa.fa-circle.f-admin
+                span=t('settings.role.admin')
+            li
               a.filter.staff
                 i.fa.fa-circle.fa-staff
                 span=t('admin-users.list.staff')
-            li
-              a.filter.elected
-                i.fa.fa-circle.f-member
-                span=t('settings.role.admin')
-            li
-              a.filter.member
-                i.fa.fa-circle.f-admin
-                span=t('settings.role.member')
     .list.list-group
       - each user in users
         .list-group-item.user-item(data-id=user.id)
@@ -104,7 +104,7 @@
                       i.fa.fa-circle.f-member
                     .off
                       i.fa.fa-circle
-                    span=t('settings.role.admin')
+                    span=t('settings.role.member')
                   - var toggleAdminClass = (user.roles.indexOf('admin') >= 0)?'on':'off'
                   a.list-group-item.f-toggle.f-admin(class=toggleAdminClass)
                     .pull-right
@@ -115,7 +115,7 @@
                       i.fa.fa-circle.f-admin
                     .off
                       i.fa.fa-circle
-                    span=t('settings.role.member')
+                    span=t('settings.role.admin')
 
                   
                       

@@ -11,11 +11,12 @@
           img(src=user.profilePicture(), width="65",id="userProfilePicture")
         .controls
           input.form-control(id='profilePictureUrl', type='text', name='profilePictureUrl', tabindex=1, placeholder=t('settings.paste-url-image'), value=user.profilePictureUrl, validate='url')
-      .fileinput.fileinput-new.btn-block(data-provides='fileinput')
-        span.btn.btn-default.btn-block.btn-file
-          span.fileinput-new= t('settings.pick_a_pic')
-          span.fileinput-exists= t('settings.pick_a_pic.change')
-          input(type='file', id='file_input', name='file_input')
+      - if (config.uploader)
+        .fileinput.fileinput-new.btn-block(data-provides='fileinput')
+          span.btn.btn-default.btn-block.btn-file
+            span.fileinput-new= t('settings.pick_a_pic')
+            span.fileinput-exists= t('settings.pick_a_pic.change')
+            input(type='file', id='file_input', name='file_input')
       .form-group
         label #{t('settings.first-name')}
         input.form-control(type='text', id="firstName", name='firstName', tabindex=2, placeholder=t('settings.first-name'), value='#{user.firstName}', validate='required firstname')
