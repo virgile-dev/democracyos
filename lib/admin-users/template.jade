@@ -1,4 +1,31 @@
-- var currentUser = user 
+- var currentUser = user
+
+mixin badge(key)
+  - var o = filter(roles,{name:key})
+  - if (o.length)
+    span.badge.role(style='background-color:#{o[0].value.color.background};')=o[0].label
+    span.role.hide(class=key)=o[0].label
+    
+mixin toggle(role,user)
+  - var toggleClass = (user.roles.indexOf(role.name) >= 0)?'on':'off'
+  a.list-group-item.f-toggle(class=toggleClass, data-toggle=role.name, data-id=user.id)
+    .pull-right
+      i.refresh.fa.fa-refresh.fa-spin.hide
+      i.ok.fa.fa-check.hide
+      i.ko.fa.fa-exclamation.hide
+    .on
+      i.fa.fa-circle(style='color:#{role.value.color.background};')
+    .off
+      i.fa.fa-circle
+    span=role.label
+    
+mixin activity(key)
+  - var o = filter(activities,{name:key})
+  - if (o.length)
+    p.info
+      i(class=o[0].value.icon.class, style='color:#{o[0].value.icon.color};')
+      span(class='activity-'+o[0].name)=o[0].label
+    
 #users-wrapper.admin-wrapper
   .users-admin
     .actions.well
@@ -21,17 +48,14 @@
                 i.fa.fa-sort-alpha-asc
                 =t('settings.last-name')
             li
-              a.filter.member
-                i.fa.fa-circle.f-member
-                span=t('settings.role.member')
-            li
-              a.filter.admin
-                i.fa.fa-circle.f-admin
-                span=t('settings.role.admin')
-            li
-              a.filter.staff
-                i.fa.fa-circle.fa-staff
+              a.filter(data-filter=t('admin-users.list.staff'))
+                i.fa.fa-hashtag.staff
                 span=t('admin-users.list.staff')
+            - each role in roles
+              li
+                a.filter.role(data-filter=role.label)
+                  i.fa.fa-circle(class=role.name,style='color:#{role.value.color.background};')
+                  span=role.label
     .list.list-group
       - each user in users
         .list-group-item.user-item(data-id=user.id)
@@ -45,11 +69,11 @@
                     span.lastName.hide=user.lastName
                     span.id.hide=user.id
                     - if (user.staff)
-                      span.badge.staff=t('admin-users.list.staff')
+                      i.fa.fa-hashtag.fa-badge.staff-alt
+                      span.staff.hide=t('admin-users.list.staff')
                     - if(user.roles)
-                      - var roles = user.roles
-                      each role in roles
-                        span.badge.role(class=role)=t('settings.role.'+role)
+                      each role in user.roles
+                        +badge(role)
                   p.info
                     i.fa.fa-envelope-o
                     span.email=user.email 
@@ -59,64 +83,36 @@
                     span=t('admin-users.list.sort.date')
                     | &nbsp;
                     i.ago(data-time=user.createdAt.toString())
-                  - if (user.location)
-                    p.info
-                      i.fa.fa-map-marker
-                      span= t('settings.location.' + user.location) 
                   - if (user.age)
                     p.info
                       i.fa.fa-birthday-cake
                       span= t('settings.age.' + user.age) 
+                  - if (user.location)
+                    - var o = filter(locations,{name:''+user.location})
+                    - if (o.length)
+                      p.info
+                        i.fa.fa-map-marker
+                        span=o[0].label
                   - if (user.activities.live)
-                    p.info
-                      i.fa.fa-street-view
-                      span.activity-live= t('settings.activity.live') 
+                    +activity('live')
                   - if (user.activities.work)
-                    p.info
-                      i.fa.fa-suitcase
-                      span.activity-work= t('settings.activity.work') 
+                    +activity('work') 
                   - if (user.activities.study)
-                    p.info
-                      i.fa.fa-graduation-cap
-                      span.activity-study= t('settings.activity.study') 
+                    +activity('study') 
             - if (currentUser.staff)
               .cols-xs-12.col-md-4
                 .list-group.actions
                   - var toggleStatusClass = user.status=='active'?'on':'off'
-                  a.list-group-item.f-toggle.f-status(class=toggleStatusClass)
+                  a.list-group-item.f-toggle(class=toggleStatusClass, id='f-role-status', data-toggle='status', data-id=user.id)
                     .pull-right
                       i.refresh.fa.fa-refresh.fa-spin.hide
                       i.ok.fa.fa-check.hide
                       i.ko.fa.fa-exclamation.hide
                     .on
-                      i.fa.fa-circle.fa-active
-                      span=t('admin-users-form.enabled')
+                      i.fa.fa-circle.active
+                      span.status-alt=t('admin-users-form.enabled')
                     .off
                       i.fa.fa-circle
                       span=t('admin-users-form.disabled')
-                  - var toggleMemberClass = (user.roles.indexOf('member') >= 0)?'on':'off'
-                  a.list-group-item.f-toggle.f-member(class=toggleMemberClass)
-                    .pull-right
-                      i.refresh.fa.fa-refresh.fa-spin.hide
-                      i.ok.fa.fa-check.hide
-                      i.ko.fa.fa-exclamation.hide
-                    .on
-                      i.fa.fa-circle.f-member
-                    .off
-                      i.fa.fa-circle
-                    span=t('settings.role.member')
-                  - var toggleAdminClass = (user.roles.indexOf('admin') >= 0)?'on':'off'
-                  a.list-group-item.f-toggle.f-admin(class=toggleAdminClass)
-                    .pull-right
-                      i.refresh.fa.fa-refresh.fa-spin.hide
-                      i.ok.fa.fa-check.hide
-                      i.ko.fa.fa-exclamation.hide
-                    .on
-                      i.fa.fa-circle.f-admin
-                    .off
-                      i.fa.fa-circle
-                    span=t('settings.role.admin')
-
-                  
-                      
-                      
+                  - each role in roles
+                    +toggle(role,user)

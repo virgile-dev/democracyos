@@ -50,7 +50,7 @@
     "url": "",
     "token": "",
     "mailer": {
-      "name": "crm.paris.fr",
+      "name": "DemocracyOS",
       "email": "no-reply@democracyos.org",
       "service": "",
       "auth": {
@@ -133,7 +133,7 @@
   "googleAPIKey": "",
   "visibility": "visible",
   "usersWhitelist": false,
-  "rules": false,
+  "rules": [],
   "multiForum": false,
   "tweetText": "",
   "forceSafeImageURLs": true,
@@ -160,5 +160,9 @@
   ],
   "baseLocale": "en",
   "enforceLocale": false,
-  "callToActionUrl": ""
+  "callToActionUrl": "",
+  "csv": {
+    "separator": ",",
+    "charset": "utf-8"
+  }
 }
