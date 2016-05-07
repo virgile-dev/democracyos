@@ -7,6 +7,7 @@
 
 - var closed = proposal.closingAt && +new Date(proposal.closingAt) < Date.now()
 - var voted = user && ~census.indexOf(user.id)
+- var credentials = user && user.roles && user.roles.includes('member');
 
 .inner-container.commentable-container(class=proposal.votable ? '' : 'hide')
 
@@ -24,7 +25,7 @@
         a.meta-item.change-vote(href="#", class= voted && !closed ? '' : 'hide')
           i.fa.fa-refresh
           small #{t('proposal-options.change-vote')}.
-
+      
       .vote-options(class= voted || closed ? 'hide' : '')
         h5= t('proposal-options.vote')
         .direct-vote

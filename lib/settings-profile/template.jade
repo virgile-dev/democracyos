@@ -8,18 +8,15 @@
       ul.form-messages
       .form-group.profile-picture
         .image-container
-          img(src=user.profilePicture(), width="65")
+          img(src=user.profilePicture(), width="65",id="userProfilePicture")
         .controls
-          - if (user.profileType==='facebook')
-            a(href="https://facebook.com", target="_blank")
-              strong= t('settings.change-at-facebook')
-          - else if (user.profileType==='google')
-            a(href="https://google.com", target="_blank")
-              strong= t('settings.change-at-google')
-          - else
-            a(href="https://gravatar.com", target="_blank")
-              strong= t('settings.change-at-gravatar')
-          input.form-control(type='text', name='profilePictureUrl', tabindex=1, placeholder=t('settings.paste-url-image'), value=user.profilePictureUrl, validate='url')
+          input.form-control(id='profilePictureUrl', type='text', name='profilePictureUrl', tabindex=1, placeholder=t('settings.paste-url-image'), value=user.profilePictureUrl, validate='url')
+      - if (config.uploader)
+        .fileinput.fileinput-new.btn-block(data-provides='fileinput')
+          span.btn.btn-default.btn-block.btn-file
+            span.fileinput-new= t('settings.pick_a_pic')
+            span.fileinput-exists= t('settings.pick_a_pic.change')
+            input(type='file', id='file_input', name='file_input')
       .form-group
         label #{t('settings.first-name')}
         input.form-control(type='text', id="firstName", name='firstName', tabindex=2, placeholder=t('settings.first-name'), value='#{user.firstName}', validate='required firstname')

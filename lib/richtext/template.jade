@@ -40,6 +40,11 @@
     if (toolbar.link)
       span.ql-format-button.ql-link(title='Link')
 
+    - if (config.uploader)
+      span.ql-format-separator
+      span.btn(id='uploader',role='button')
+        i.fa.fa-image
+        
     if (toolbar.image)
       span.ql-format-separator
       span.ql-format-button.ql-image(title='Image')

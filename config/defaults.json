@@ -5,6 +5,12 @@
   "publicPort": 3000,
   "subPath": "",
   "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
+  "uploader": "",
+  "amazon": {
+    "username": "",
+    "password": "",
+    "bucket": ""
+  },
   "mongoUsersUrl": "",
   "jwtSecret": "Generate a secret token and paste it here.",
   "corsDomains": [],
@@ -44,7 +50,7 @@
     "url": "",
     "token": "",
     "mailer": {
-      "name": "The DemocracyOS Team",
+      "name": "DemocracyOS",
       "email": "no-reply@democracyos.org",
       "service": "",
       "auth": {
@@ -89,7 +95,10 @@
     "availableLocales",
     "domainWhiteList",
     "showCommentsReplies",
-    "subPath"
+    "subPath",
+    "callToActionUrl",
+    "uploader",
+    "rules"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -124,6 +133,7 @@
   "googleAPIKey": "",
   "visibility": "visible",
   "usersWhitelist": false,
+  "rules": [],
   "multiForum": false,
   "tweetText": "",
   "forceSafeImageURLs": true,
@@ -148,5 +158,11 @@
     "uk",
     "zh_TW"
   ],
-  "enforceLocale": false
+  "baseLocale": "en",
+  "enforceLocale": false,
+  "callToActionUrl": "",
+  "csv": {
+    "separator": ",",
+    "charset": "utf-8"
+  }
 }
