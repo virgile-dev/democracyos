@@ -31,6 +31,12 @@
                 a.filter.forum(data-filter=forum.title)
                   i.fa.fa-folder-open
                   span=forum.title
+        .col-xs-12
+          hr/
+          a.btn.btn-default.btn-sm(href='#{config.subPath}/csv/all-comments', target='_self', title='export-all-comments')
+            span.fa.fa-download
+            &nbsp;
+            span=t('admin-topics.export.all-comments')
                   
     .list.list-group
       - each topic in topics

@@ -80,6 +80,7 @@
   "admin-topics-form.title.edit": "Édition du débat",
   "admin-topics-form.url": "URL",
   "admin-topics.list.add-topic": "Nouveau",
+  "admin-topics.export.all-comments": "Exporter toutes les contributions au format CSV",
   "admin-topics.list.close.future": "Clôture",
   "admin-topics.list.close.past": "Fermé",
   "admin-topics.list.search.placeholder": "Rechercher un débat ...",
