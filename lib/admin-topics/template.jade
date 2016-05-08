@@ -26,6 +26,11 @@
               a.sort(data-sort='topic-title')
                 i.fa.fa-sort-alpha-asc
                 =t('admin-topics-form.label.mediaTitle')
+            - each forum in forums
+              li
+                a.filter.forum(data-filter=forum.title)
+                  i.fa.fa-folder-open
+                  span=forum.title
                   
     .list.list-group
       - each topic in topics

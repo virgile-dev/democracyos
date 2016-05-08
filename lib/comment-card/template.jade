@@ -3,6 +3,11 @@ mixin remove-action
   button.btn.btn-default.delete-comment(title=t('comment-card.remove-argument'), class=hide)
     i.fa.fa-trash-o
 
+mixin badge(key)
+  - var o = filter(roles,{name:key})
+  - if (o.length)
+    span.badge.role(style='background-color:#{o[0].value.color.background};')=o[0].label
+
 li.comment-item(class=classes)
   .media
     .media-left
@@ -19,11 +24,10 @@ li.comment-item(class=classes)
         - else
           | #{comment.author.fullName}
           - if (comment.author.staff)
-            span.badge.staff=t('admin-users.list.staff')
+            i.fa.fa-hashtag.fa-badge.staff
           - if(comment.author.roles)
-            - var roles = comment.author.roles
-            each role in roles
-              span.badge(class=role)=t("settings.role."+role)
+            - each role in comment.author.roles
+              +badge(role)
         small.ago(data-time=comment.createdAt.toString())
         - if (comment.editedAt)
           small.edited &nbsp;·&nbsp;#{t('comments.edited')}

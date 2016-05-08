@@ -45,6 +45,8 @@
   "admin-topics-form.clause.label.text": "Contenu",
   "admin-topics-form.clause.text-centered": "Texte centré",
   "admin-topics-form.delete-topic.button.delete": "Supprimer",
+  "admin-topics-form.button.preview": "Prévisualiser",
+  "admin-topics-form.button.view": "Voir",
   "admin-topics-form.delete-topic.confirmation.body": "Cette action supprimera cet élément de façon permanente. Voulez-vous continuer ?",
   "admin-topics-form.delete-topic.confirmation.cancel": "Annuler",
   "admin-topics-form.delete-topic.confirmation.ok": "Supprimer",
