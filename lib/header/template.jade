@@ -10,9 +10,12 @@
         //span.hidden-xs= config.organizationName
         - var mobileLogo = !!config.logoMobile
         - var classes = mobileLogo ? 'hidden-xs' : ''
-        img(src=config.logo, class=classes).logo-image
+        - if (config.logo)
+          img(src=config.logo, class=classes).logo-image
+        - else
+          span(class=classes)= config.organizationName
         - if (mobileLogo)
-          img(src=(config.subPath + config.logoMobile)).logo-image.visible-xs-inline-block
+          img(src=(config.subPath + config.logoMobile), title=config.organizationName).logo-image.visible-xs-inline-block
         
   .user-nav.btn-group
     .user
