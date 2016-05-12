@@ -24,22 +24,22 @@
         label= t('signup.retype-password')
         input.form-control(type='password', name='re_password', tabindex=5, placeholder=t('password.repeat'), validate='required same:password')
       .form-group
-        label #{t('settings.location')}
-        select.form-control(id='location', name='location', tabindex=6)
-          option(value=0)
-      .form-group
         label #{t('settings.age')}
         select.form-control(id='age', name='age', tabindex=7)
           option(value=0)
-      .form-group
-        input(type='checkbox',id='activityLive',name='activityLive')
-        label.inline #{t('settings.activity.live')}
-      .form-group
-        input(type='checkbox',id='activityWork',name='activityWork')
-        label.inline #{t('settings.activity.work')}
-      .form-group
-        input(type='checkbox',id='activityStudy',name='activityStudy')
-        label.inline #{t('settings.activity.study')}
+      - if(config.rules && (config.rules.indexOf('location') >= 0))
+        .form-group
+          label #{t('settings.location')}
+          select.form-control(id='location', name='location', tabindex=6)
+            option(value=0)
+            - each location in locations
+              option(value=location.name)= location.label
+      - if(config.rules && (config.rules.indexOf('activity') >= 0))
+        - each activity in activities
+          - var fieldName = 'activity' + activity.name.charAt(0).toUpperCase() + activity.name.slice(1);
+          .form-group
+            input(type='checkbox', id=fieldName, name=fieldName)
+            label.inline= activity.label
       .form-group: button.btn.btn-info.btn-block(tabindex=6)=t('signup.now')
       .form-group
         - var tos = config.termsOfService;

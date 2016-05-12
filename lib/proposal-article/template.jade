@@ -26,11 +26,11 @@
       span(style="color: #{proposal.tag.color}")= proposal.tag.name
 
     .meta-information
-      p
-        i.fa.fa-calendar
-        - if (proposal.closingAt)
-          span.time-ago-label= (closed ? t('common.closed') : t('common.close')) + " "
-          span.meta-item.meta-timeago.ago(data-time=proposal.closingAt.toString())
+      - if (proposal.closingAt)
+        p
+          i.fa.fa-calendar
+            span.time-ago-label= (closed ? t('common.closed') : t('common.close')) + " "
+            span.meta-item.meta-timeago.ago(data-time=proposal.closingAt.toString())
 
     h1=proposal.mediaTitle
     - if (proposal.author)
