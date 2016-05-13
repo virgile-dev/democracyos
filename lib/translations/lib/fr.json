@@ -214,6 +214,7 @@
   "forum.form.title.placeholder": "Le nom de votre concertation",
   "forum.form.url.label": "URL",
   "forum.form.url.unavailable": "L'URL n'est pas disponible",
+  "forum.link": "Participez à cette concertation",
   "forum.status.creating": "Création de votre concertation",
   "forum.status.destroying": "Suppression...",
   "forum.status.error": "Une erreur s'est produite, merci de recommencer plus tard.",

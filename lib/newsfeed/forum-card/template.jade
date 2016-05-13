@@ -1,5 +1,9 @@
 .forum-card
-  a.link(href=forum.url)
-    .cover
+  .cover.clearfix
+    a.link(href=forum.url)
       h1= forum.title
-      p= forum.summary
+    p= forum.summary
+    a.btn.btn-info.pull-right(href=forum.url)
+      = t('forum.link')
+      &emsp;
+      i.fa.fa-chevron-right

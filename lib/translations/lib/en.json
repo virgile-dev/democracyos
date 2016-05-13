@@ -214,6 +214,7 @@
   "forum.form.title.placeholder": "The title for your democracy",
   "forum.form.url.label": "Democracy URL",
   "forum.form.url.unavailable": "URL is not available",
+  "forum.link": "Contribute to this forum",
   "forum.status.creating": "Creating democracy...",
   "forum.status.destroying": "Destroying...",
   "forum.status.error": "There was an error in this democracy, try again later please.",
