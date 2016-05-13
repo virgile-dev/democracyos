@@ -87,18 +87,19 @@ mixin activity(key)
                     p.info
                       i.fa.fa-birthday-cake
                       span= t('settings.age.' + user.age) 
-                  - if (user.location)
+                  - if(config.rules && (config.rules.indexOf('location') >= 0) && user.location)
                     - var o = filter(locations,{name:''+user.location})
                     - if (o.length)
                       p.info
                         i.fa.fa-map-marker
                         span=o[0].label
-                  - if (user.activities.live)
-                    +activity('live')
-                  - if (user.activities.work)
-                    +activity('work') 
-                  - if (user.activities.study)
-                    +activity('study') 
+                  - if(config.rules && (config.rules.indexOf('activity') >= 0))
+                    - if (user.activities.live)
+                      +activity('live')
+                    - if (user.activities.work)
+                      +activity('work') 
+                    - if (user.activities.study)
+                      +activity('study') 
             - if (currentUser.staff)
               .cols-xs-12.col-md-4
                 .list-group.actions

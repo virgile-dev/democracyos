@@ -28,12 +28,12 @@
 
         fieldset
           label= t('forum.form.title.label')
-          .form-group.clearfix.title
+          .input-group.solo.title
             input.form-control.f-title(type='text', name='title', value=forum.title, placeholder= t('forum.form.title.placeholder'), validate='required')
 
         fieldset
           label= t('forum.form.summary.label')
-          .form-group.clearfix.summary
+          .input-group.solo.summary
             input.form-control.f-summary(type='text', name='summary', value=forum.summary, placeholder= t('forum.form.summary.placeholder'), maxlength=300, validate='required max-length:300')
         
         fieldset.commands

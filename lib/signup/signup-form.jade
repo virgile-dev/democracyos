@@ -1,3 +1,5 @@
+- var tabindex = 1
+
 .signup-container.inner-container.small-container
   #signup-form
     .title-page
@@ -10,27 +12,27 @@
       ul.form-errors
       .form-group
         label= t('signup.email')
-        input.form-control(type='email', name='email', tabindex=1, placeholder=t('forgot.mail.example'), validate='required email')
+        input.form-control(type='email', name='email', tabindex=tabindex++, placeholder=t('forgot.mail.example'), validate='required email')
       .form-group
         label #{t('signup.your-firstname')}
-        input.form-control(type='text', id='firstName', name='firstName', tabindex=2, placeholder=t('signup.firstname'), validate='required firstname')
+        input.form-control(type='text', id='firstName', name='firstName', tabindex=tabindex++, placeholder=t('signup.firstname'), validate='required firstname')
       .form-group
         label #{t('signup.your-lastname')}
-        input.form-control(type='text', id='lastName', name='lastName', tabindex=3, placeholder=t('signup.lastname'), validate='required lastname')
+        input.form-control(type='text', id='lastName', name='lastName', tabindex=tabindex++, placeholder=t('signup.lastname'), validate='required lastname')
       .form-group
         label= t('password')
-        input.form-control(type='password', name='password', tabindex=4, placeholder=t('password'), validate='required min-length:6')
+        input.form-control(type='password', name='password', tabindex=tabindex++, placeholder=t('password'), validate='required min-length:6')
       .form-group
         label= t('signup.retype-password')
-        input.form-control(type='password', name='re_password', tabindex=5, placeholder=t('password.repeat'), validate='required same:password')
+        input.form-control(type='password', name='re_password', tabindex=tabindex++, placeholder=t('password.repeat'), validate='required same:password')
       .form-group
         label #{t('settings.age')}
-        select.form-control(id='age', name='age', tabindex=7)
+        select.form-control(id='age', name='age', tabindex=tabindex++)
           option(value=0)
       - if(config.rules && (config.rules.indexOf('location') >= 0))
         .form-group
           label #{t('settings.location')}
-          select.form-control(id='location', name='location', tabindex=6)
+          select.form-control(id='location', name='location', tabindex=tabindex++)
             option(value=0)
             - each location in locations
               option(value=location.name)= location.label
@@ -38,9 +40,9 @@
         - each activity in activities
           - var fieldName = 'activity' + activity.name.charAt(0).toUpperCase() + activity.name.slice(1);
           .form-group
-            input(type='checkbox', id=fieldName, name=fieldName)
+            input(type='checkbox', id=fieldName, name=fieldName, tabindex=tabindex++)
             label.inline= activity.label
-      .form-group: button.btn.btn-info.btn-block(tabindex=6)=t('signup.now')
+      .form-group: button.btn.btn-info.btn-block(tabindex=tabindex++)=t('signup.now')
       .form-group
         - var tos = config.termsOfService;
         - var pp = config.privacyPolicy;
@@ -55,13 +57,13 @@
     - if (config.facebookSignin)
       #auth-facebook-form
         form(action="#{config.subPath}/auth/facebook", method="get", role="form")
-          button.btn.btn-block.btn-labeled.btn-default.btn-facebook(type="submit")
+          button.btn.btn-block.btn-labeled.btn-default.btn-facebook(type="submit", tabindex=tabindex++)
             span.btn-label.pull-left: i.fa.fa-facebook
             span= t('signin.login-with-facebook')
     - if (config.googleSignin)
       #auth-google-form
         form(action="#{config.subPath}/auth/google", method="get", role="form")
-          button.btn.btn-block.btn-labeled.btn-default.btn-google(type="submit")
+          button.btn.btn-block.btn-labeled.btn-default.btn-google(type="submit", tabindex=tabindex++)
             span.btn-label.pull-left: i.fa.fa-google
             span= t('signin.login-with-google')
   #signup-message.hide
