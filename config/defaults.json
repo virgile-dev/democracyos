@@ -100,7 +100,8 @@
     "subPath",
     "callToActionUrl",
     "uploader",
-    "rules"
+    "rules",
+    "userAge"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -138,6 +139,7 @@
   "visibility": "visible",
   "usersWhitelist": false,
   "rules": [],
+  "userAge": false,
   "multiForum": false,
   "tweetText": "",
   "forceSafeImageURLs": true,

@@ -31,10 +31,11 @@
       .form-group
         label #{t('settings.locale')}
         select.form-control(id='locale', name='locale',tabindex=tabindex++)
-      .form-group
-        label #{t('settings.age')}
-        select.form-control(id='age', name='age',tabindex=tabindex++)
-          option(value=0)
+      - if (config.userAge)
+        .form-group
+          label #{t('settings.age')}
+          select.form-control(id='age', name='age',tabindex=tabindex++)
+            option(value=0)
       - if(config.rules && (config.rules.indexOf('location') >= 0))
         .form-group
           label #{t('settings.location')}

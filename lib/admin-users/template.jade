@@ -83,7 +83,7 @@ mixin activity(key)
                     span=t('admin-users.list.sort.date')
                     | &nbsp;
                     i.ago(data-time=user.createdAt.toString())
-                  - if (user.age)
+                  - if (config.userAge && user.age)
                     p.info
                       i.fa.fa-birthday-cake
                       span= t('settings.age.' + user.age) 

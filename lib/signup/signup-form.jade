@@ -25,10 +25,11 @@
       .form-group
         label= t('signup.retype-password')
         input.form-control(type='password', name='re_password', tabindex=tabindex++, placeholder=t('password.repeat'), validate='required same:password')
-      .form-group
-        label #{t('settings.age')}
-        select.form-control(id='age', name='age', tabindex=tabindex++)
-          option(value=0)
+      - if (config.userAge)
+        .form-group
+          label #{t('settings.age')}
+          select.form-control(id='age', name='age', tabindex=tabindex++)
+            option(value=0)
       - if(config.rules && (config.rules.indexOf('location') >= 0))
         .form-group
           label #{t('settings.location')}
