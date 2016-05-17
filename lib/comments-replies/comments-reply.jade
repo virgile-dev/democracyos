@@ -1,5 +1,10 @@
 - var own = reply.author.id == user.id
 
+mixin badge(key)
+  - var o = filter(roles,{name:key})
+  - if (o.length)
+    span.badge.role(style='background-color:#{o[0].value.color.background};')=o[0].label
+    
 li.reply-item(data-id=reply.id, data-comment-id=comment.id)
   .media
     .media-left
@@ -20,11 +25,10 @@ li.reply-item(data-id=reply.id, data-comment-id=comment.id)
                   i.fa.fa-trash-o
         span #{reply.author.fullName}
         - if (reply.author.staff)
-          span.badge.staff=t('admin-users.list.staff')
+          i.fa.fa-hashtag.fa-badge.staff
         - if(reply.author.roles)
-          - var roles = reply.author.roles
-          each role in roles
-            span.badge(class=role)=t("settings.role."+role)
+          each role in reply.author.roles
+            +badge(role)
         br/
         small.ago(data-time=(reply.createdAt ? reply.createdAt.toString() : new Date()))
         - if (reply.editedAt)
