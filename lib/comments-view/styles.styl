@@ -4,6 +4,10 @@ content_width = 780px
 tab_color = #909fa0
 /* Comments
 -------------------------------------------------- */
+
+@import 'node_modules/medium-editor/dist/css/medium-editor.css';
+@import 'node_modules/medium-editor/dist/css/themes/beagle.css';
+
 .comments
   background #f9f9f9
   padding-top 50px
@@ -84,9 +88,14 @@ tab_color = #909fa0
         .fa
           margin 0 6px
 
+      .editable
+        min-height: 300px
+
       textarea
         width 100%
         padding 2%
+        &.editable
+          height: 300px
       .form-submit
         background-color #484848
         color white
