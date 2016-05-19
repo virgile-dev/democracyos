@@ -41,9 +41,9 @@ mixin btn-new-comment
           form.comment-form(method='post', action='#{config.subPath}/api/comment?topicId=#{item.id}', autovalidate, autosubmit)
             .form-toolbar.clearfix
               span.form-title=t('comments.new.argument')
-              a.pull-right(href='#{config.subPath}/help/markdown', target='_blank')
-                span=t('markdown.comments.formatting-help')
-                span.fa.fa-question-circle
+              //- a.pull-right(href='#{config.subPath}/help/markdown', target='_blank')
+              //-   span=t('markdown.comments.formatting-help')
+              //-   span.fa.fa-question-circle
             .form-group
               textarea.form-control.editable#f-text(name='text', rows='6', placeholder=t('comments.your.placeholder'), tabindex=1)
             .form-toolbar=t('comments.alias.title')

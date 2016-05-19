@@ -78,6 +78,9 @@ tab_color = #909fa0
             &:hover
               background-color darken(#EF5350, 40%)
 
+    .editable.comment-text
+      padding: 16px 21px
+
     form.comment-form
 
       .form-toolbar
@@ -89,13 +92,12 @@ tab_color = #909fa0
           margin 0 6px
 
       .editable
-        min-height: 300px
+        min-height: 200px
+        height: auto
 
       textarea
         width 100%
         padding 2%
-        &.editable
-          height: 300px
       .form-submit
         background-color #484848
         color white
