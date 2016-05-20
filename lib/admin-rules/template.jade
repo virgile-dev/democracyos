@@ -24,4 +24,8 @@
               span.rules-icon.fa.fa-fw.fa-th-list
             default 
               span.rules-icon.fa.fa-fw.fa-cogs
-          span.rules-title=rule.name
+          - if (rules.label)
+            span.rules-title #{rules.label}
+            p.small #{t('admin-rule.name')} : #{rules.name}
+          - else
+            span.rules-title=rule.name
