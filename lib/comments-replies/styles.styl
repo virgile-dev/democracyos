@@ -11,7 +11,7 @@
 
       padding-left 40px
 
-      &:hover .media-heading .actions
+      &:hover .media .media-heading .actions
         opacity 1
 
       &.remove
@@ -58,9 +58,6 @@
         .reply-edit-form
           display block
 
-      .comment-edit-form
-        display none
-
       img
         width 42px
         height 42px
@@ -76,11 +73,12 @@
   .reply-form
     min-height 180px
 
+    .editable
+      min-height: 100px
+      height: auto
+
     textarea
       width 99%
-      resize none
-      margin 1%
-      padding 2%
 
     .form-actions
       a, input
