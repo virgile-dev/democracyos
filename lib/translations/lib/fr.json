@@ -76,6 +76,7 @@
   "admin-topics-form.label.clause-truncation-text": "Marque de séparation de résumé",
   "admin-topics-form.label.closingAt": "Date de clôture",
   "admin-topics-form.label.forum": "Concertation",
+  "admin-topics-form.label.topicId": "Identification",
   "admin-topics-form.label.mediaTitle": "Titre",
   "admin-topics-form.label.publishedAt": "Date de publication",
   "admin-topics-form.label.resources": "Ressources",
