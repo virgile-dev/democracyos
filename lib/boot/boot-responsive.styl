@@ -84,6 +84,30 @@
   .uv-icon
     display: none !important
 
+  .app-footer
+    height auto
+    .footer-content
+      margin-top 35px
+      padding-left 30px
+    .footer-links:nth-child(2)
+      .btn-block
+        text-align: left
+
+@media screen and (max-width: 448px)
+  .app-footer
+    font-size 70%
+    text-align center
+
+    .colophon
+      a.btn-link
+        font-size 100%
+
+    .footer-content
+      padding 0 20px
+    .footer-links
+      .btn-block
+        text-align: center !important
+
   /* Snap.js
   ----------------------------------------------- */
   .snap-content
@@ -94,7 +118,10 @@
     left: 0
     bottom: 0
     width: auto
-    height: auto
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto 20px ;
     z-index: 9990
     -webkit-overflow-scrolling: touch
     -webkit-transform: s('translate3d(0, 0, 0)')
@@ -102,6 +129,10 @@
     -ms-transform: s('translate3d(0, 0, 0)')
     -o-transform: s('translate3d(0, 0, 0)')
     transform: s('translate3d(0, 0, 0)')
+
+    .push
+      height: 150px;
+      clear: both;
 
   .snap-drawers
     position: absolute

@@ -11,19 +11,26 @@ link(rel='stylesheet', href='#{config.subPath}/app.css')
 - var fontFamily = config.fontFamily;
 - var myHeaderBackgroundColor = config.headerBackgroundColor;
 - var myHeaderFontColor = config.headerFontColor;
+- var myFooterBackgroundColor = config.footerBackgroundColor;
+- var myFooterFontColor = config.footerFontColor;
 - var myHeaderContrast = config.headerContrast ? '0 2px 2px rgba(0, 0, 0, 0.3)' : 'none';
 style.
   
   body {
-    font-family: !{fontFamily}
+    font-family: !{fontFamily} ;
   }
   
   .header-background-color {
-    background-color: !{myHeaderBackgroundColor}
+    background-color: !{myHeaderBackgroundColor} ;
   }
   .header-font-color {
-    color: !{myHeaderFontColor}
+    color: !{myHeaderFontColor} ;
   }
   .header-contrast {
-    box-shadow: !{myHeaderContrast}
+    box-shadow: !{myHeaderContrast} ;
+  }
+
+  .app-footer {
+    background-color: !{myFooterBackgroundColor} ;
+    color: !{myFooterFontColor} ;
   }

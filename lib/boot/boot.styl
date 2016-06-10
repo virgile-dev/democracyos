@@ -23,10 +23,13 @@ html
 
 body
   color rgba(#000, .8)
-  overflow hidden
   font-size 16px
   line-height 1.4
   font-family 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+html, body
+  height: 100%;
+  margin: 0 !important;
 
 h1,
 h2,
@@ -247,19 +250,63 @@ label
 
 /* Site Content Container
 -------------------------------------------------- */
+
+.snap-content
+  // min-height: 100%;
+  // height: auto !important;
+  // height: 100%;
+  // margin: 0 auto 20px ;
+
+
+section#browser
+  display none
 body.browser-page
+  section#browser
+    display block
   section#content
     display none
 
 section.site-content
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -200px ;
   padding-top header_height
-  top 0
-  left nav_proposal_width
-  right 0
-  bottom 0
+
+  .push
+    height: 200px;
+    clear: both;
+
+  &.loading-lock
+    position static !important
+
   &#content
     z-index 12
-    left 0
+
+  .app-content
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+
+.app-footer
+  padding 30px 0 40px
+  height 200px
+  z-index 20
+
+  .footer-content
+    padding-right 30px
+
+  .colophon
+    padding-top 5px
+    a.btn-link
+      color: #aaa
+
+.footer-links
+  .btn-block
+    text-align: right
+  a.btn-link
+    color: #fff
 
 /* Signin page
 -------------------------------------------------- */
@@ -277,10 +324,7 @@ section.site-content
 -------------------------------------------------- */
 aside.nav-proposal
   margin-top header_height
-  top 0
-  left 0
-  bottom 0
-  width nav_proposal_width
+  // width nav_proposal_width
   overflow-y scroll
   background #f0f0f0
   z-index 10
