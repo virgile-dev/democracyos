@@ -40,16 +40,19 @@ html(lang='en')
       
       header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
       
-      section#content.site-content
-        block content
-        .push
-      section#browser.site-content
-        .container-fluid
-          .row
-            .col-xs-12.col-md-3
-              aside.nav-proposal
-            .col-xs-12.col-md-9
-              section.app-content
+      .main-container
+      
+        section#content.site-content
+          block content
+          .push
+        section#browser.site-content
+          .container-fluid
+            .row
+              .col-xs-12.col-md-3
+                aside.nav-proposal
+              .col-xs-12.col-md-9
+                section.app-content
+                
         .push
       footer.app-footer
         include includes/footer-static.jade
