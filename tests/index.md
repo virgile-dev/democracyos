@@ -18,3 +18,13 @@ sudo apt-get install openjdk-8-jdk
 cd tests
 nightwatch
 ```
+
+# Lauch with chrome
+```
+nightwatch -e chrome
+```
+
+# Download drivers
+[Firefox](https://github.com/mozilla/geckodriver/releases)
+
+[Chrome](http://chromedriver.storage.googleapis.com/index.html)
