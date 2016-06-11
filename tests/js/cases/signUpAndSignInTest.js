@@ -16,21 +16,13 @@ module.exports = {
 
     indexPage  
       .navigate()
-      .waitForElementVisible("@loginBtn", TIMEOUT)
-      .click("@loginBtn");
+      .clickOnSignin();
 
     signinPage
-      .waitForElementVisible("@signupBtn", TIMEOUT)
-      .click("@signupBtn")
+      .clickOnSignup()
 
     signupPage
-      .waitForElementVisible("@form", TIMEOUT)
-      .setValue("@email", USER.email)
-      .setValue("@firstName", USER.firstName)
-      .setValue("@lastName", USER.lastName)
-      .setValue("@password", USER.password)
-      .setValue("@rePassword", USER.password)
-      .submitForm("@form")
+      .signupWithUser(USER)
 
     signupConfirmPage
       .waitForElementVisible("@successMessage", TIMEOUT)
@@ -39,14 +31,10 @@ module.exports = {
       .assert.containsText("@successMessage", USER.lastName)
 
     indexPage  
-      .waitForElementVisible("@loginBtn", TIMEOUT)
-      .click("@loginBtn");
+      .clickOnSignin();
 
     signinPage
-      .waitForElementVisible("@form", TIMEOUT)
-      .setValue("@email", USER.email)
-      .setValue("@password", USER.password)
-      .submitForm("@form")
+      .signinWithUser(USER)
 
     indexPage   
       .waitForElementVisible("@userBadgeName", TIMEOUT)   
