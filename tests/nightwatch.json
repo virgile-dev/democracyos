@@ -1,9 +1,9 @@
 {
-  "src_folders" : ["js"],
+  "src_folders" : ["js/cases"],
   "output_folder" : "reports",
   "custom_commands_path" : "",
   "custom_assertions_path" : "",
-  "page_objects_path" : "",
+  "page_objects_path" : "js/pages",
   "globals_path" : "",
 
   "selenium" : {

@@ -2,7 +2,11 @@ module.exports = {
   'DemocracyOS Sign in test' : function (browser) {
     var TIMEOUT = 1000;
 
-    var LOGIN_BTN = ".user-nav .login";
+    var indexPage = browser.page.index();
+    var signinPage = browser.page.signin();
+    var signinForm = signinPage.section.form();
+
+    var LOGIN_BTN = indexPage.loginBtn//".user-nav .login";
     var LOGIN_FORM = "form.form";
     var LOGIN_FORM_EMAIL = LOGIN_FORM + " input[name=email]";
     var LOGIN_FORM_PASSWORD = LOGIN_FORM + " input[name=password]";
@@ -29,8 +33,12 @@ module.exports = {
 
     browser
       .url(browser.launchUrl)
-      .waitForElementVisible(LOGIN_BTN, TIMEOUT)
-      .click(LOGIN_BTN)
+      //.waitForElementVisible(LOGIN_BTN, TIMEOUT)
+
+    indexPage  
+      .click("@loginBtn");
+
+    browser  
       .waitForElementVisible(SIGNUP_BTN, TIMEOUT)
       .click(SIGNUP_BTN)
       .waitForElementVisible(SIGNUP_FORM, TIMEOUT)
@@ -48,9 +56,16 @@ module.exports = {
     browser
       //.url(browser.launchUrl)
       .waitForElementVisible(LOGIN_BTN, TIMEOUT)
-      .click(LOGIN_BTN)
-      .waitForElementVisible(LOGIN_FORM, TIMEOUT)
-      .setValue(LOGIN_FORM_EMAIL, USER.email)
+    indexPage  
+      .click("@loginBtn");
+
+    signinForm
+      .setValue(@email, USER.email)
+      .setValue(@password, USER.password)
+
+    browser  
+      //.waitForElementVisible(LOGIN_FORM, TIMEOUT)
+      //  .setValue(LOGIN_FORM_EMAIL, USER.email)
       .setValue(LOGIN_FORM_PASSWORD, USER.password)
       .submitForm(LOGIN_FORM)
       .waitForElementVisible(USER_BADGE_NAME, TIMEOUT)
