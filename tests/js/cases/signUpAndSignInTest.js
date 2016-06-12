@@ -14,7 +14,7 @@ module.exports = {
       lastName: 'pichon'
     }
 
-    indexPage  
+    indexPage
       .navigate()
       .clickOnSignin();
 
@@ -26,21 +26,21 @@ module.exports = {
 
     signupConfirmPage
       .waitForElementVisible("@successMessage", TIMEOUT)
-      .assert.containsText("@successMessage", "Welcome")
+      .assert.containsText("@successMessage", "Bienvenue")
       .assert.containsText("@successMessage", USER.firstName)
       .assert.containsText("@successMessage", USER.lastName)
 
-    indexPage  
+    indexPage
       .clickOnSignin();
 
     signinPage
       .signinWithUser(USER)
 
-    indexPage   
-      .waitForElementVisible("@userBadgeName", TIMEOUT)   
-      .assert.containsText("@userBadgeName", USER.firstName.toUpperCase())  
+    indexPage
+      .waitForElementVisible("@userBadgeName", TIMEOUT)
+      .assert.containsText("@userBadgeName", USER.firstName.toUpperCase())
 
-    browser  
+    browser
       .end();
   }
 };
