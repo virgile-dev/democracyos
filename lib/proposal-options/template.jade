@@ -43,7 +43,7 @@
           p.text-mute.overlay-vote.hide= t('proposal-options.must-be-signed-in') + '. '
             a(href="#{config.subPath}/signin")= t('signin.login')
             = ' ' + t('common.or') + ' '
-            a(href="#{config.subPath}/signup?reference=" + reference)= t('signin.signup')
+            a(href="#{config.subPath}/signup")= t('signin.signup')
             = '.'
 
       .votes-cast
