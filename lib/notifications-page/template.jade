@@ -5,7 +5,7 @@ mixin message (notification)
       span &nbsp;
       span=t('notifications.upvote.verb')
       span &nbsp;
-      strong=notification.comment.text
+      strong!=notification.comment.text
       span &nbsp;
       span=t('notifications.on')
       span &nbsp;
@@ -15,7 +15,7 @@ mixin message (notification)
       span &nbsp;
       span=t('notifications.downvote.verb')
       span &nbsp;
-      strong=notification.comment.text
+      strong!=notification.comment.text
       span &nbsp;
       span=t('notifications.on')
       span &nbsp;
@@ -25,7 +25,7 @@ mixin message (notification)
       span &nbsp;
       span=t('notifications.reply.verb')
       span &nbsp;
-      strong=notification.comment.text
+      strong!=notification.comment.text
       span &nbsp;
       span=t('notifications.on')
       span &nbsp;
