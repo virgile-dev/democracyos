@@ -13,7 +13,7 @@
         - if (config.logo)
           img(src=config.logo, class=classes).logo-image
         - else
-          span(class=classes)= config.organizationName
+          span.header-font-color(class=classes)= config.organizationName
         - if (mobileLogo)
           img(src=(config.subPath + config.logoMobile), title=config.organizationName).logo-image.visible-xs-inline-block
         

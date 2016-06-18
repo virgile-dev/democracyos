@@ -64,9 +64,9 @@ mixin btn-new-comment
     - if (!logged)
       .signup-info
         p.text-mute= t('comments.sign-in-required')
-        - var signinUrl = config.subPath + '/signin?reference=' + reference
+        - var signinUrl = config.subPath + '/signin'
         a(href=signinUrl)= t('signin.login')
         | &nbsp;#{t('common.or')}&nbsp;
-        - var signupUrl = config.subPath + '/signup?reference=' + reference
+        - var signupUrl = config.subPath + '/signup'
         a(href=signupUrl)= t('signin.signup')
       
