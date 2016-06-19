@@ -103,7 +103,8 @@
     "callToActionUrl",
     "uploader",
     "rules",
-    "userAge"
+    "userAge",
+    "embeded"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -132,6 +133,7 @@
   "legalTerms": false,
   "glossary": false,
   "homeLink": "/",
+  "embeded": false,
   "headerBackgroundColor": "#64476e",
   "headerFontColor": "#fff",
   "headerContrast": false,
