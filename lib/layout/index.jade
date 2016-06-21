@@ -32,7 +32,9 @@ html(lang='en')
 
       include includes/remove-hash
 
-  body
+  - var contentClasses = config.embeded ? 'site-embeded' : '';
+  
+  body(class=contentClasses)
     block body
       //- Start of `Page Content`
       - var color = config.headerBackgroundColor;
@@ -41,13 +43,12 @@ html(lang='en')
       - if (!config.embeded)
         header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
       
-      - var contentClasses = config.embeded ? 'site-embeded' : '';
-      .main-container
+      .main-container(class=contentClasses)
       
-        section#content.site-content(class=contentClasses)
+        section#content.site-content
           block content
           .push
-        section#browser.site-content(class=contentClasses)
+        section#browser.site-content
           .container-fluid
             .row
               .col-xs-12.col-md-3
@@ -59,6 +60,8 @@ html(lang='en')
       - if (!config.embeded)
         footer.app-footer
           include includes/footer-static.jade
+      - else
+        footer(data-iframe-height)
 
       
 
