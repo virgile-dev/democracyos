@@ -49,7 +49,7 @@ mixin activity(key)
                 =t('settings.last-name')
             li
               a.filter(data-filter=t('admin-users.list.staff'))
-                i.fa.fa-hashtag.staff
+                i.fa.fa-wrench.staff
                 span=t('admin-users.list.staff')
             - each role in roles
               li
@@ -69,7 +69,7 @@ mixin activity(key)
                     span.lastName.hide=user.lastName
                     span.id.hide=user.id
                     - if (user.staff)
-                      i.fa.fa-hashtag.fa-badge.staff-alt
+                      i.fa.fa-wrench.fa-badge.staff-alt
                       span.staff.hide=t('admin-users.list.staff')
                     - if(user.roles)
                       each role in user.roles

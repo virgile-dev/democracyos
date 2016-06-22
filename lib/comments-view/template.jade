@@ -1,42 +1,50 @@
 - var logged = user.logged()
-mixin btn-new-comment
-  a.btn.btn-block.btn-dashed.new-comment
-    i.fa.fa-plus
-    span=t('comments.new.argument')
 
 .comments
   .inner-container
     .comments-icon.commentable-container
       i.fa.fa-comments
     h2=t('comments.arguments')
-    - if (logged)
-      ul.comments-nav.nav.nav-pills.nav-justified(role='tablist')
-        li.new-comment(role='presentation')
-          a(href='#form',aria-controls='form',role='tab',data-toggle='pill')
-            i.fa.fa-plus
-        li.active(role='presentation')
-          a(href='#all',aria-controls='all',role='tab',data-toggle='pill')
-            = t('comments.all')
-        li(role='presentation')
-          a(href='#user',aria-controls='user',role='tab',data-toggle='pill')
-            = t('comments.your.arguments')
     
-    .filter-container
+    .filter-container.clearfix
+      button.btn.btn-lg.btn-primary.new-comment.pull-right.hidden-xs(role='button',aria-label=t('comments.new.argument'))
+        i.fa.fa-plus
+        span=t('comments.new.argument')
+      .sort-container
+      - if (logged)
+        .comments-own.clearfix.hide
+          label=t('comments.filter-own')
+          .ui-switch
+            input(type='checkbox')
+            label.status
 
+    
+    ul.comments-nav.nav.nav-pills.nav-justified(role='tablist')
+      li.new-comment(role='presentation')
+        a(href='#form',aria-controls='form',role='tab',data-toggle='pill')
+          i.fa.fa-plus
+      li.active(role='presentation')
+        a(href='#all',aria-controls='all',role='tab',data-toggle='pill')
+          = t('comments.all')
+      li(role='presentation')
+        a(href='#user',aria-controls='user',role='tab',data-toggle='pill')
+          = t('comments.your.arguments')
+    
     .tab-content
       .tab-pane.active#all.all-comments(role='tabpanel')    
-        +btn-new-comment
+        a.btn.btn-block.btn-dashed.new-comment.visible-xs
+          i.fa.fa-plus
+          span=t('comments.new.argument')
         ul.media-list.comments-list
         btn.btn.btn-block.btn-dashed.load-comments.hide
           i.fa.fa-caret-down
           span=t('comments.load-more')
-        - if (logged)
-          +btn-new-comment
       - if (logged)
         .tab-pane#user.my-comments(role='tabpanel')
-          +btn-new-comment
+          a.btn.btn-block.btn-dashed.new-comment.visible-xs
+            i.fa.fa-plus
+            span=t('comments.new.argument')
           ul.media-list.my-comments-list
-          +btn-new-comment
         .tab-pane#form(role='tabpanel')
           form.comment-form(method='post', action='#{config.subPath}/api/comment?topicId=#{item.id}', autovalidate, autosubmit)
             .form-toolbar.clearfix
@@ -69,4 +77,8 @@ mixin btn-new-comment
         | &nbsp;#{t('common.or')}&nbsp;
         - var signupUrl = config.subPath + '/signup'
         a(href=signupUrl)= t('signin.signup')
+    - else
+      a.btn.btn-block.btn-dashed.new-comment
+        i.fa.fa-plus
+        span=t('comments.new.argument')
       

@@ -24,7 +24,7 @@ li.comment-item(class=classes)
         - else
           | #{comment.author.fullName}
           - if (comment.author.staff)
-            i.fa.fa-hashtag.fa-badge.staff
+            i.fa.fa-wrench.fa-badge.staff
           - if(comment.author.roles)
             - each role in comment.author.roles
               +badge(role)
@@ -86,12 +86,12 @@ li.comment-item(class=classes)
         button.btn.btn-block.btn-dashed.new-reply
           i.fa.fa-plus
           span=t('comments.reply')
-  span.error
+  span
     .oncomment.loginrequired
       =t('comments.sign-in-required-to-vote-comments')
       |.
       a(href='#{config.subPath}/signin')= t('signin.login')
-      |  #{t('common.or')}
+      |  #{t('common.or')}  
       a(href='#{config.subPath}/signup')= t('signin.signup')
       |.
   .replies-container
