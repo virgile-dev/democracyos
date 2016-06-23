@@ -1,5 +1,5 @@
 doctype html5
-html(lang='en')
+html(lang=locale)
   head
     block head
       //-
@@ -57,6 +57,9 @@ html(lang='en')
                 section.app-content
                 
         .push
+        
+      #hidden-plugin-container
+      
       - if (!config.embeded)
         footer.app-footer
           include includes/footer-static.jade
