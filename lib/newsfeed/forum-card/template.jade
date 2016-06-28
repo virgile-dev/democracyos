@@ -1,4 +1,4 @@
-.col-sm-12.col-md-6.col-lg-4
+.col-sm-12.col-md-6
   .forum-card.panel.panel-info
     .panel-heading
       a.link(href=forum.url)
@@ -6,18 +6,18 @@
     .panel-body
       p= forum.summary
     .panel-footer.clearfix
-      - var nbTopics = Math.floor((Math.random() * 20) + 1);
-      span.stats
-        = nbTopics
-        b débats
-      - var nbParticipants = Math.floor((Math.random() * 100) + 1);
-      span.stats
-        = nbParticipants
-        i.fa.fa-user
-      - var nbComments = Math.floor((Math.random() * 500) + 1);
-      span.stats
-        = nbComments
-        i.fa.fa-comment
+      //- - var nbTopics = Math.floor((Math.random() * 20) + 1);
+      //- span.stats
+      //-   = nbTopics
+      //-   b débats
+      //- - var nbParticipants = Math.floor((Math.random() * 100) + 1);
+      //- span.stats
+      //-   = nbParticipants
+      //-   i.fa.fa-user
+      //- - var nbComments = Math.floor((Math.random() * 500) + 1);
+      //- span.stats
+      //-   = nbComments
+      //-   i.fa.fa-comment
       a.btn.btn-default.btn-sm.pull-right(href=forum.url)
         = t('forum.link')
         &emsp;

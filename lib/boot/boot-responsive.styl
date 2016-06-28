@@ -33,10 +33,17 @@
         display: inline-block
 
 @media screen and (max-width: 991px)
+  .browser-page
+    header.app-header
+      #toggleButton
+        display block
+      a.home
+        left 46px
   header.app-header
     padding-left: 0
-    #toggleButton
-      display: block
+    a.home
+      position absolute
+      height 64px
     h1#logo
       text-align: center
       width: auto
