@@ -1,21 +1,21 @@
 #header-container
-  a(href='#', id='toggleButton')
-    - var headerFontColor = config.headerFontColor || '#fff';
-    span.bar-icon(style='background-color: #{headerFontColor}')
-    span.bar-icon(style='background-color: #{headerFontColor}')
-    span.bar-icon(style='background-color: #{headerFontColor}')
-
-    h1#logo
-      a(href=config.homeLink || '#{config.subPath}/')
-        //span.hidden-xs= config.organizationName
-        - var mobileLogo = !!config.logoMobile
-        - var classes = mobileLogo ? 'hidden-xs' : ''
-        - if (config.logo)
-          img(src=config.logo, class=classes).logo-image
-        - else
-          span.header-font-color(class=classes)= config.organizationName
-        - if (mobileLogo)
-          img(src=(config.subPath + config.logoMobile), title=config.organizationName).logo-image.visible-xs-inline-block
+  button.navbar-toggle(type="button", id='toggleButton', data-toggle="offcanvas", data-target="#nav-proposal", data-canvas="body")
+    span.bar-icon(style='background-color: white')
+    span.bar-icon(style='background-color: white')
+    span.bar-icon(style='background-color: white')
+    
+  a.home(href=config.homeLink || '#{config.subPath}/')
+    i.fa.fa-home
+  h1#logo
+    a(href=config.organizationUrl)
+      - var mobileLogo = !!config.logoMobile
+      - var classes = mobileLogo ? 'hidden-xs' : ''
+      - if (config.logo)
+        img(src=config.logo, class=classes).logo-image
+      - else
+        span.header-font-color(class=classes)= config.organizationName
+      - if (mobileLogo)
+        img(src=(config.subPath + config.logoMobile), title=config.organizationName).logo-image.visible-xs-inline-block
         
   .user-nav.btn-group
     .user
