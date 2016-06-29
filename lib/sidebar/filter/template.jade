@@ -15,7 +15,7 @@
       each sort, name in sorts
         - var active = name == currentSort.name
         li(data-sort=name, class= active ? 'active' : '')
-          a(href='#')= t(sort.label)
+          button.btn.btn-link(type='button')= t(sort.label)
 
   .sidebar-filter-hide-voted(class=user.logged() ? '' : 'hide')
     input#hide-voted(type='checkbox',

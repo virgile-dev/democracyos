@@ -18,6 +18,7 @@ tab_color = #909fa0
 
   .no-comments
     text-align center
+    padding 35px 0
 
   .inner-container
     position relative
@@ -35,48 +36,89 @@ tab_color = #909fa0
         left 0
         margin 0 20px
 
-    .filter-container, .form-toolbar
+    .form-toolbar
       margin-top 12px
       height 20px
 
     .media-list
       margin-top 10px
 
-    ul.comments-nav.nav-pills.nav-justified
-      li
-        display table-cell
-        width content_width
+    .filter-container
+      padding-left 25px
+      margin 46px auto
+      label
+        display inline-block
+        font-size 13px
+        font-weight bold
+        margin-right 10px
+        color #3d699e
 
-        & > a
-          border-radius 0px
-          background-color tab_color
-          border-right 1px solid darken( tab_color , 30% )
-          color white
-          font-size 14px
-          padding 4.7px 0
+      .sort-container
+        min-height 10px
 
-          transition all 0.3s ease
+      .new-comment
+        font-weight normal
+        padding 17px 32px
+        font-size 16px
+        margin-top 10px
 
-          &:hover
-            background-color darken( tab_color , 30% )
+      .comments-own
+        margin-top 15px
+        label
+          position relative
+          top -5px
+        .ui-switch
+          display: inline-block;
+          width: 50px;
+          height: 31px;
+          position: relative
 
-        &.active > a
-          background-color darken( tab_color , 30% )
-          box-shadow rgba(0,0,0,0.15) 0 3px 5px 0 inset
-        &:first-of-type > a
-          border-radius 4px 0px 0px 4px
-        &:last-of-type > a
-          border-radius 0px 4px 4px 0px
-          border-right none
+          input[type=checkbox]
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 100;
+              opacity: 0;
+              outline: 0;
+              margin: 0
 
-        &.new-comment
-          width 34px
-          a
-            background-color #EF5350
-            border-right none
-            padding 8px 10px 7px
-            &:hover
-              background-color darken(#EF5350, 40%)
+          input[type=checkbox]:checked+.status
+            background: #3d699e
+
+          .status
+            top: 8px;
+            left: 0;
+            width: 68%;
+            height: 14px;
+            border-radius: 27px;
+            background: #d0d2d3;
+            cursor: pointer;
+            position: relative;
+            display: inline-block
+
+          input[type=checkbox]:checked+.status::before
+            -webkit-transform: translate(70%,-5%);
+            transform: translate(70%,-5%)
+
+          .status::before
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background: #fff;
+            box-shadow: 0 0 1px 0 rgba(0,0,0,.25),0 4px 11px 0 rgba(0,0,0,.08),-1px 3px 3px 0 rgba(0,0,0,.14);
+            transition: transform .1s ease 0s,-webkit-transform .1s ease 0s;
+            border-radius: 50%;
+            -webkit-transform: translate(-5%,-5%);
+            transform: translate(-5%,-5%)
+
+    ul.comments-nav
+      display none
 
     .editable.comment-text
       padding: 16px 21px

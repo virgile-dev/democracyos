@@ -1,5 +1,5 @@
 doctype html5
-html(lang='en')
+html(lang=locale)
   head
     block head
       //-
@@ -32,20 +32,41 @@ html(lang='en')
 
       include includes/remove-hash
 
-  body
+  - var contentClasses = config.embeded ? 'site-embeded' : '';
+  
+  body(class=contentClasses)
     block body
-      #snap-content.snap-content
-        //- Start of `Page Content`
-        - var color = config.headerBackgroundColor;
-        - var headerClassName = config.headerContrast ? 'with-contrast' : '';
+      //- Start of `Page Content`
+      - var color = config.headerBackgroundColor;
+      - var headerClassName = config.headerContrast ? 'with-contrast' : '';
+      
+      - if (!config.embeded)
         header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
+      
+      .main-container(class=contentClasses)
+      
         section#content.site-content
           block content
+          .push
         section#browser.site-content
-          section.app-content
+          .container-fluid
+            .row
+              .col-xs-12.col-md-3
+                aside#nav-proposal.nav-proposal
+              .col-xs-12.col-md-9
+                section.app-content
+                
+        .push
+        
+      #hidden-plugin-container
+      
+      - if (!config.embeded)
+        footer.app-footer
+          include includes/footer-static.jade
+      - else
+        footer(data-iframe-height)
 
-      .snap-drawers
-        aside.nav-proposal
+      
 
 
       //- End of `Page Content`
@@ -59,6 +80,10 @@ html(lang='en')
       script(src='https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.1.0/readmore.min.js')
       script(src='https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.1.0/readmore.min.js')
       script(src='https://cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.min.js')
+      
+      - if (config.embeded)
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.contentWindow.min.js')
+      
       //- General Site javascript
       script.
         window.config=!{JSON.stringify(client)};

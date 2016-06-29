@@ -25,7 +25,7 @@ li.reply-item(data-id=reply.id, data-comment-id=comment.id)
                   i.fa.fa-trash-o
         span #{reply.author.fullName}
         - if (reply.author.staff)
-          i.fa.fa-hashtag.fa-badge.staff
+          i.fa.fa-wrench.fa-badge.staff
         - if(reply.author.roles)
           each role in reply.author.roles
             +badge(role)

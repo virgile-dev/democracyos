@@ -3,14 +3,35 @@ color = #888
 color2 = #aaa
 
 body.newsfeed #content
-  background #f0f0f0
 
 .newsfeed-page
+
+  .intro
+    min-height 100%
+    height: auto !important;
+    height: 100%;
+    background-size cover
+    background-repeat no-repeat
+    background-position center top
+    background-image unquote("url('boot/home-bg.jpg')")
+    padding-top 10%
+
+    .jumbotron
+      background-color rgba(0, 0, 0, 0.5);
+      color white
+      max-width 768px
+      margin: 10% auto
+
+      a.btn-default
+        color white
+        &:hover
+          background-color #1976D2
+          border-color #1976D2
+
   .content
     margin-left auto
     margin-right auto
     padding 0 15px 40px
-    max-width 600px
 
   .forum-info
     .cover

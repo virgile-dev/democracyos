@@ -1,6 +1,4 @@
 .comments-filter
-  float right
-  position relative
 
   &.active
     .dropdown-list
@@ -9,44 +7,26 @@
   &.hide
     display none
 
-  .btn
-    background-color transparent
-    color #3d699e
-    font-size 12px
-    font-weight normal
-    text-align center
-    text-transform none
-    padding 0 20px 0 10px
 
-    .caret
-      color #3d699e
+  .btn-group
+    .fa
+      color #999
+    .btn
+      height 32px
+      padding 5px 12px
 
-  .dropdown-list
-    display none
-    position absolute
-    right 0
-    z-index 1000
-    margin-top 2px
-    padding 5px 0
-    min-width 160px
-    width 100%
-    font-size 14px
-    list-style none
-    border-radius 2px
-    border 1px solid rgba(#000,.15)
-    box-shadow 1px 1px 4px -1px rgba(#000, .175)
-    text-align right
-    background-color #f9f9f9
+      &.active
+        .fa
+          color #3d699e
+        &.upvote .fa
+          color green
+        &.downvote .fa
+          color red
 
-    li
-      background-color #f9f9f9
-
-      a
-        display block
-        clear both
-        padding 6px 14px
-        line-height 1.5
-        color #3d699e
-        font-weight 400
-        font-size 12px
-        white-space normal
+    .btn-default.active, .btn-default:active,
+    .btn-default.active.focus, .btn-default.active:focus,
+    .btn-default.active:hover, .btn-default:active.focus,
+    .btn-default:active:focus, .btn-default:active:hover
+      border-color #3d699e
+      background-color transparent
+      box-shadow none
