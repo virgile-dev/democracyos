@@ -4,7 +4,7 @@
       h1
         i.fa.fa-folder
         =t(form.title)
-    form.form(action=(config.subPath+form.action), method="post", role="form", novalidate, autovalidate, autosubmit)
+    form.form.main-form(action=(config.subPath+form.action), method="post", role="form", novalidate, autovalidate, autosubmit)
       ul.form-errors
       .status-wrapper
         .status.creating
@@ -48,15 +48,24 @@
               span= t('admin-topics-form.delete-topic.button.delete')
         
         #deleteModal.modal.fade(tabindex="-1",role="dialog",aria-labelledby="deleteModalLabel")
-          .modal-dialog(role="document")
+          .modal-dialog.admin-forum-delete-modal(role="document")
             .modal-content
               .modal-header
-                button.close(type="button",data-dismiss="modal",aria-label="Close")
+                button.close.cancel(type="button",data-dismiss="modal",aria-label="Close")
                   span(aria-hidden="true") &times;
-                h4.modal-title#deleteModalLabel Modal title
+                h4.modal-title#deleteModalLabel
+                  = t('settings-forums.delete.confirmation.title')
               .modal-body
-                p dljdlkgjhdljgmldqjgslw
+                form(method='delete', autovalidate)
+                  p.text-danger!=t('settings-forums.delete.confirmation.body')
+                  .well
+                    p!=t('settings-forums.delete.confirmation.instructions', { domain: forum.name })
+                    .form-group
+                      input.forum-name.form-control(type='text', name='forum', validate='equals:'+forum.name)
+                  .form-messages.hide
               .modal-footer
-                button.btn.btn-default(type="button",data-dismiss="modal",aria-label="Close") Close
-                button.btn.btn-primary(type="button",data-dismiss="modal",aria-label="Save") Save
+                button.btn.btn-default(type="button",data-dismiss="modal",aria-label=t('admin-rule.delete-rule.confirmation.cancel'))
+                  = t('admin-rule.delete-rule.confirmation.cancel')
+                button.btn.btn-danger.ok.main(type="button",disabled=true,data-dismiss="modal",aria-label=t('settings-forums.delete.confirmation.button-confirm'))
+                  = t('settings-forums.delete.confirmation.button-confirm')
                 
