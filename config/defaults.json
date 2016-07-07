@@ -44,7 +44,9 @@
     "serverKey": "server.key",
     "serverCert": "server.crt",
     "port": 443,
-    "redirect": "normal"
+    "redirect": "normal",
+    "certbotKey": "",
+    "certbotToken": ""
   },
   "notifications": {
     "url": "",
