@@ -2,8 +2,8 @@
   a(id='toggleButton', data-toggle="offcanvas", data-target="#sidebar" )
     i.fa.fa-bars
     
-  //- a.home(href=config.homeLink || '#{config.subPath}/')
-  //-   i.fa.fa-home
+  a.home(href=config.homeLink || '#{config.subPath}/')
+    i.fa.fa-home
   h1#logo
     a(href=config.organizationUrl)
       - var mobileLogo = !!config.logoMobile
