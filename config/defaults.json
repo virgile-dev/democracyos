@@ -87,6 +87,8 @@
     "homeLink",
     "headerBackgroundColor",
     "headerFontColor",
+    "headerContent",
+    "footerContent",
     "tagColor",
     "fontFamily",
     "fontFamilyLink",
@@ -106,7 +108,8 @@
     "uploader",
     "rules",
     "userAge",
-    "embeded"
+    "embeded",
+    "forumSummaryLength"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -127,6 +130,7 @@
   "googleAnalyticsTrackingId": "",
   "rssEnabled": true,
   "commentsPerPage": 0,
+  "forumSummaryLength": 2048,
   "showCommentsReplies": false,
   "spamLimit": 5,
   "frequentlyAskedQuestions": false,
@@ -139,6 +143,8 @@
   "headerBackgroundColor": "#64476e",
   "headerFontColor": "#fff",
   "headerContrast": false,
+  "headerContent": "includes/intro.jade",
+  "footerContent": "lib/footer/footer.jade",
   "tagColor": "#2D2D2D",
   "footerBackgroundColor": "#2D2D2D",
   "footerFontColor": "#fff",

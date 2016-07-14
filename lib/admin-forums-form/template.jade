@@ -32,6 +32,11 @@
             input.form-control.f-title(type='text', name='title', value=forum.title, placeholder= t('forum.form.title.placeholder'), validate='required')
 
         fieldset
+          label= t('forum.form.image.label')
+          .input-group.solo.image
+            input.form-control.f-title(type='text', name='image', value=forum.imageUrl, placeholder= t('forum.form.image.placeholder'), validate='url')
+
+        fieldset
           label= t('forum.form.summary.label')
           .input-group.solo.summary
             input.form-control.f-summary(type='text', name='summary', value=forum.summary, placeholder= t('forum.form.summary.placeholder'), maxlength=300, validate='required max-length:300')

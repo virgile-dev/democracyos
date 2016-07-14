@@ -42,6 +42,7 @@ html(lang=locale)
       
       - if (!config.embeded)
         header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
+        section.app-intro
       
       .main-container(class=contentClasses)
       
@@ -62,7 +63,6 @@ html(lang=locale)
       
       - if (!config.embeded)
         footer.app-footer
-          include includes/footer-static.jade
       - else
         footer(data-iframe-height)
 
