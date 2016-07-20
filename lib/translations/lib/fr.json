@@ -217,6 +217,8 @@
   "forum.form.title": "Créer mon espace DemocracyOS",
   "forum.form.title.label": "Titre",
   "forum.form.title.placeholder": "Le nom de votre consultation",
+  "forum.form.image.label": "Image",
+  "forum.form.image.placeholder": "Lien vers une image pour illustrer la consultation",
   "forum.form.url.label": "URL",
   "forum.form.url.unavailable": "L'URL n'est pas disponible",
   "forum.link": "Participez",

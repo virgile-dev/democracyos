@@ -23,18 +23,24 @@
             div.input-group-addon
               span.desktop= domain
               span.mobile /
-            input.form-control.f-name(type='text', name='name', validate='required forum', autofocus, id='hostname', autocorrect='off', autocapitalize='off', value=forum.name)
+            input.form-control.f-name(type='text', name='name', validate='required forum', autofocus, id='hostname', autocorrect='off', autocapitalize='off', value=forum.name, tabindex='1')
             span.error.name-unavailable.hide=t('forum.form.url.unavailable')
 
         fieldset
           label= t('forum.form.title.label')
           .input-group.solo.title
-            input.form-control.f-title(type='text', name='title', value=forum.title, placeholder= t('forum.form.title.placeholder'), validate='required')
+            input.form-control.f-title(type='text', name='title', value=forum.title, tabindex='2', placeholder= t('forum.form.title.placeholder'), validate='required')
+
+        fieldset
+          label= t('forum.form.image.label')
+          .input-group.solo.image
+            input.form-control.f-title(type='text', name='image', value=forum.imageUrl, tabindex='3', placeholder= t('forum.form.image.placeholder'), validate='url')
 
         fieldset
           label= t('forum.form.summary.label')
           .input-group.solo.summary
-            input.form-control.f-summary(type='text', name='summary', value=forum.summary, placeholder= t('forum.form.summary.placeholder'), maxlength=300, validate='required max-length:300')
+            - var validateSummary = 'required' ;
+            textarea.form-control.editable.f-summary(name='summary',rows='6', tabindex='4', placeholder= t('forum.form.summary.placeholder'))= forum.summary
         
         fieldset.commands
           button.btn.btn-primary.btn-labeled

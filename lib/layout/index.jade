@@ -42,6 +42,7 @@ html(lang=locale)
       
       - if (!config.embeded)
         header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
+        section.app-intro
       
       .main-container(class=contentClasses)
       
@@ -51,9 +52,9 @@ html(lang=locale)
         section#browser.site-content
           .container-fluid
             .row
-              .col-xs-12.col-md-3
+              .col-xs-12.col-md-3.col-sidebar
                 aside#nav-proposal.nav-proposal
-              .col-xs-12.col-md-9
+              .col-xs-12.col-md-9.col-content
                 section.app-content
                 
         .push
@@ -62,7 +63,6 @@ html(lang=locale)
       
       - if (!config.embeded)
         footer.app-footer
-          include includes/footer-static.jade
       - else
         footer(data-iframe-height)
 
