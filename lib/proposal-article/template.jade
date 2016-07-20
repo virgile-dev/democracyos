@@ -1,3 +1,10 @@
+
+- if (proposal.forum)
+  .forum-intro
+    h2= proposal.forum.title
+    - if (proposal.forum.summary)
+      .description!= proposal.forum.summary
+
 - var closed = proposal.closed
 - var logged = user.logged()
 .inner-container

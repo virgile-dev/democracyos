@@ -7,26 +7,22 @@ body.newsfeed #content
 .newsfeed-page
 
   .intro
-    min-height 100%
-    height: auto !important;
-    height: 100%;
     background-size cover
     background-repeat no-repeat
     background-position center top
-    background-image unquote("url('boot/home-bg.jpg')")
-    padding-top 10%
+    // background-image unquote("url('boot/home-bg.jpg')")
 
-    .jumbotron
-      background-color rgba(0, 0, 0, 0.5);
-      color white
-      max-width 768px
-      margin: 10% auto
+    .jumbotron, .inner
+      margin: 15px auto
 
       a.btn-default
         color white
         &:hover
           background-color #1976D2
           border-color #1976D2
+
+    .inner
+      padding 0 15px
 
   .content
     margin-left auto
