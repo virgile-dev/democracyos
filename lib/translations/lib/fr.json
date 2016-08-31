@@ -383,7 +383,7 @@
   "settings.pick_a_pic.change": "Changer",
   "settings.pick_a_pic.no_file_selected": "Aucun fichier sélectionné",
   "settings.profile": "Profil",
-  "settings.profile.alert.action": "Complèter votre profil",
+  "settings.profile.alert.action": "Compléter votre profil",
   "settings.profile.alert.message": "Merci de compléter votre profil en cliquant <a class='alert-link' href='{subPath}/settings/profile'>ici</a>.",
   "settings.role": "Rôle(s)",
   "settings.role.admin": "CA",
