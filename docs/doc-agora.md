@@ -12,7 +12,8 @@ Quelques petits changements pour rendre le tout un peu plus "sleak", notamment a
 
 **JSON**
 
-```{
+```
+{
   ...
   "fontFamily": "'Montserrat', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif",
   "fontFamilyLink": "https://fonts.googleapis.com/css?family=Montserrat:400,700",
@@ -21,7 +22,8 @@ Quelques petits changements pour rendre le tout un peu plus "sleak", notamment a
 ```
 **ENV**
 
-```export FONT_FAMILY="'Montserrat', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+```
+export FONT_FAMILY="'Montserrat', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 export FONT_FAMILY_LINK="https://fonts.googleapis.com/css?family=Montserrat:400,700"
 ```
 
@@ -47,7 +49,8 @@ Pour l'instant limitée aux photos de profil, l'envoi d'image est desormais poss
 
 **JSON**
 
-```{
+```
+{
   ...
   "uploader": "amazon",
   "amazon": {
@@ -61,7 +64,8 @@ Pour l'instant limitée aux photos de profil, l'envoi d'image est desormais poss
 
 **ENV**
 
-```export UPLOADER="amazon"
+```
+export UPLOADER="amazon"
 export AMAZON_USERNAME="AAKJHFKJQFLKQLKBFKQBFJH"
 export AMAZON_PASSWORD="8663iuHFKGHQKquhfkjdhsf553djhgfkjs"
 export AMAZON_BUCKET="my-bucket-name"
@@ -70,8 +74,7 @@ export AMAZON_BUCKET="my-bucket-name"
 
 *Note : Amazon peut mettre quelques heures à rendre un bucket disponible après sa création. Dans ce cas, vous risquez de tomber sur l'erreur suivante*
 
-```Could not get Signed URL
-```
+`Could not get Signed URL`
 
 ###Login google APP
 
@@ -79,7 +82,8 @@ De la manière que le login Facebook, il est maintenant possible de s'incrire et
 
 **JSON**
 
-```{
+```
+{
   ...
   "googleSignin": true,
   "auth": {
@@ -94,7 +98,8 @@ De la manière que le login Facebook, il est maintenant possible de s'incrire et
 
 **ENV**
 
-```export GOOGLE_SIGNIN=true
+```
+export GOOGLE_SIGNIN=true
 export AUTH_GOOGLE_CLIENT_ID="1234567890-ffdge455gfzghh7735vjfs556.apps.googleusercontent.com"
 export AUTH_GOOGLE_CLIENT_SECRET="ks-sfqfq325hkjkj67fkqjsbf"
 ```
@@ -131,7 +136,8 @@ Pour activer cette option, il faut utliser la variable de configuration suivante
 
 **JSON**
 
-```{
+```
+{
   ...
   "userAge": true,
   ...
@@ -140,7 +146,8 @@ Pour activer cette option, il faut utliser la variable de configuration suivante
 
 **ENV**
 
-```export USER_AGE=true
+```
+export USER_AGE=true
 ```
 
 ####Quartier
@@ -198,7 +205,8 @@ Des variables de configuration sont disponibles pour modifier le format du fichi
 
 **JSON**
 
-```{
+```
+{
   ...
   "csv": {
     "separator": ";",
@@ -210,7 +218,8 @@ Des variables de configuration sont disponibles pour modifier le format du fichi
 
 **ENV**
 
-```export CSV_SEPARATOR=";"
+```
+export CSV_SEPARATOR=";"
 export CSV_CHARSET="windows-1252"
 ```
 
@@ -226,7 +235,8 @@ Pour activer cette option, il faut utliser la variable de configuration suivante
 
 **JSON**
 
-```{
+```
+{
   ...
   "rules": ["role","location","activity"],
   ...
@@ -235,7 +245,8 @@ Pour activer cette option, il faut utliser la variable de configuration suivante
 
 **ENV**
 
-```export RULES="role,location,activity"
+```
+export RULES="role,location,activity"
 ```
 où chaque valeur indique un type de règle qui sera activé
 
@@ -249,7 +260,8 @@ Les rôles peuvent être associés à tous les utilisateurs (mais uniquement par
 
 Le format du champ Valeur (contenu de la rêgle) est le suivant
 
-```{
+```
+{
   "label": {
     "default": "manager",
     "fr": "chef",
@@ -267,7 +279,8 @@ Affiché sous la forme d'une liste déroulante dans les formulaires concernant l
 
 Le format du champ Valeur (contenu de la règle) est le suivant
 
-```{
+```
+{
     "label": {
         "fr": "La Boule Champs-Pierreux",
         "default": "Quartier 3"
@@ -281,7 +294,8 @@ Affiché sous la forme d'une liste de case à cocher dans les formulaires concer
 
 Le format du champ Valeur (contenu de la règle) est le suivant
 
-```{
+```
+{
     "label": {
         "default": "work",
         "fr": "Je travaille à Paris",
