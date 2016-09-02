@@ -6,7 +6,14 @@ Cette version comprend :
 
 ###UX DESIGN
 
-Quelques petits changements pour rendre le tout un peu plus "sleak", notamment avec une refonte du module de commentaire / arguments
+Quelques petits changements pour rendre le tout un peu plus "sleak".
+
+- Page d'accueil `MULTI-FORUM`dont le texte d'intro est modifiable en allant dans `/lib/layout/includes/intro.jade`
+![page accueil](https://participez.nanterre.fr/sites/default/files/screenshot-consultation.openlaw.fr%202016-09-02%2011-38-54.png)
+- Refonte du module de commentaire / arguments
+![commentaires](https://participez.nanterre.fr/sites/default/files/comments%20new%20UX.png)
+- Ajout d'un footer modifiable en allant dans `/lib/footer/footer.jade`
+![commentaires](https://participez.nanterre.fr/sites/default/files/footer.png)
 
 À noter la possibilité de changer la police de caractère principale grace aux variables de configuration suivantes :
 
@@ -122,7 +129,7 @@ Note : le code gérant l'envoi des emails n'est pas intégré à DemocracyOS et 
 ###Gestion de Utlisateurs - informations complémentaires
 
 Les informations suivantes sont maintenant disponibles lors de la création d'un compte utilisateur :
-
+![inscription](https://participez.nanterre.fr/sites/default/files/incription%20dos.png)
 
 ####Age
 
@@ -173,6 +180,7 @@ Pour rappel, l'interface d'administration n'est accessible que les utlisateurs d
 ###Administration - LISTE DES UTILISATEURS
 
 Mise à disposition d'une page pour lister et rechercher les utilisateurs inscrits.
+![liste utilisateurs](https://participez.nanterre.fr/sites/default/files/user%20list.png)
 
 De plus cette liste permet de :
 
