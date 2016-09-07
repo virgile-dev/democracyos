@@ -1,11 +1,11 @@
 Mentions légales
 ======
 
-####OpenSource
+###OpenSource
 
 Cette plateforme est développée à partir de technologies open source. Vous pouvez trouver son code source sur http://www.github.com/nanterre
 
-####Traitement des données personnelles
+###Traitement des données personnelles
 
 Les données personnelles recueillies sur le site résultent de la communication volontaire d'une adresse de courrier électronique lors du dépôt d'un message électronique. Les courriels ainsi recueillis ne servent qu’à transmettre les éléments d’informations demandés ou liés à votre activité sur la plate-forme.
 Formulaire de collecte d'informations
