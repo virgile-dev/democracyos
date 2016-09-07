@@ -1,5 +1,5 @@
 ##Foire aux questions
-======
+------
 
 ####Comment participer en ligne?
 
