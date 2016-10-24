@@ -378,7 +378,7 @@
   "settings.notifications.updated": "Vos paramètres de notification ont été actualisé avec succès",
   "settings.password-invalid": "Le mot de passe saisi est incorrect",
   "settings.password-updated": "Votre mot de passe a été actualisé avec succès",
-  "settings.paste-url-image": "Coller une URL de l'image ici ou",
+  "settings.paste-url-image": "Coller une URL de l'image ici",
   "settings.pick_a_pic": "Chargez une photo de profil",
   "settings.pick_a_pic.change": "Changer",
   "settings.pick_a_pic.no_file_selected": "Aucun fichier sélectionné",
